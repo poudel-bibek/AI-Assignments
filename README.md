@@ -12,7 +12,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
   
   
     | Assignment no. | Classwork | Homework | HW solutions |
-    |----------------|--------------|-----------|----------|-----------------------|
+    |----------------|-----------|----------|-----------------------|
     | A1             |[Colab](https://colab.research.google.com/github/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)    | A1 HW    | A1 HW Solutions       |
     | A2             |[Colab](https://colab.research.google.com/github/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)    | A2 HW    | A1 HW Solutions       |
 
