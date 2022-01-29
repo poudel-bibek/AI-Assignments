@@ -1,4 +1,4 @@
-![alt text](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/assets/css/nepal.jpg?raw=true)
+![alt text](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/assets/css/img_1.jpg?raw=true)
 
 Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
