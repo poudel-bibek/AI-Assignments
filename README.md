@@ -2,11 +2,12 @@ Instructor: [Weizi Li](https://weizi-li.github.io/)
 
 TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
----
 
-## Assignment 1: Wed 2/4
+## [General instructions](instructions.md)
+
+## Wed 2/4
   - [Slides]()
-  - [Colab Notebook](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)
+  - Assignment 1: [GitHub](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb) [Colab](https://colab.research.google.com/github/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)
   - [Demo upload video]() 
 
 ---
