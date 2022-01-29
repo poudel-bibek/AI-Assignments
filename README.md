@@ -1,9 +1,11 @@
 ![alt text](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/assets/css/img_1.jpg?raw=true)
 
+## Assignments
 Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
-### [General instructions](instructions.md)
-- [Demo upload video](), [Slides]()
+- [General instructions](instructions.md)
+- [Demo explaination video]()
+- [Intro Slides]()
 
 ---
 ## Assignment 1: Machine Learning Basics
