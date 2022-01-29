@@ -1,6 +1,2 @@
 title: Assignments for COMP 4720: Intro to AI
-remote_theme: pages-themes/primer@v0.2.0
-
-#theme: jekyll-theme-primer 
-#title: Assignments for COMP 4720: Intro to AI
-#jekyll-theme-cayman 
+theme: jekyll-theme-primer 
