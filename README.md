@@ -1,4 +1,4 @@
-![Octocat](	https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8)
+![Octocat](favicon.png)
 
 Instructor: [Weizi Li](https://weizi-li.github.io/)
 
