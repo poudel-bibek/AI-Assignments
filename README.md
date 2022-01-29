@@ -15,7 +15,7 @@ TA: [Bibek Poudel](https://poudel-bibek.github.io)
   - 
   
   
-----
+
 ## Support and Contact
   - Join the class [Discord Server](https://discord.gg/pGbxNGNT)
   - Email me (bpoudel at memphis.edu)
