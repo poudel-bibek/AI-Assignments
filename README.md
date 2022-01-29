@@ -1,3 +1,5 @@
+![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+
 Instructor: [Weizi Li](https://weizi-li.github.io/)
 
 TA: [Bibek Poudel](https://poudel-bibek.github.io)
