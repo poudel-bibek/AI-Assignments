@@ -1,4 +1,4 @@
-![Octocat](favicon.png)
+![Octocat](large_icon.png)
 
 Instructor: [Weizi Li](https://weizi-li.github.io/)
 
