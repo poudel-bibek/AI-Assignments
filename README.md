@@ -5,7 +5,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 
 - [General instructions](instructions.md)
 - [Demo explaination video]()
-- [Intro Slides]()
+- [Intro slides]()
 
 ---
 ## Assignment 1: Machine Learning Basics
