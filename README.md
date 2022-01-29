@@ -9,25 +9,25 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 1: Machine Learning Basics
   
   - [Task](https://colab.research.google.com/drive/1fDAIPerBr8kEvEEFzgaPf24Lop8tk9uZ?usp=sharing)
-  - Solution
+  - [Solution]()
  
-<!--[A1 Solutions]()-->
+<!--[A1 Solution](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing)-->
 
 ---
 ## Assignment 2: Linear Models
 
-  - Task
-  - Solution
+  - [Task](https://colab.research.google.com/drive/17anz72YbO3cnM3ry9wy4aDCLyGYWqxQL?usp=sharing)
+  - [Solution]()
   
- <!--[A2 Solution]()-->
+ <!--[A2 Solution](https://colab.research.google.com/drive/1y3m0rTYrSEvFRPbIPgYuxrTcYKi89GQG?usp=sharing)-->
  
  ---
 ## Assignment 3: Non-Linear Models
 
-  - Task
-  - Solution
+  - [Task](https://colab.research.google.com/drive/1WZFbN8GbXK9OwfS0rE74LVM2ZqT6wWR7?usp=sharing)
+  - [Solution]()
   
- <!--[A3 Solution]()-->
+ <!--[A3 Solution](https://colab.research.google.com/drive/1G6HND9_p6HE0GCEaCpflt85ngOMqZdn4?usp=sharing)-->
  
 ---
 ## Support and Contact
