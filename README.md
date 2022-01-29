@@ -5,24 +5,24 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ### [General instructions](instructions.md)
 
 ---
-## Feb/4, Wed: 
+## Assignment 1: Machine Learning Basics
   
   - [Demo upload video](), [Slides]()
   - Activities:
   
   
-    | Sno. | Classwork | Homework | HW solutions |
+    | Sno. | Classwork | Homework |
     |----------------|-----------|----------|-----------------------|
     | A1             |[A1 CW](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing)    | [A1 HW](https://colab.research.google.com/drive/17yWwSPn90MkIm6xzjRzdoeHpgCNnO-Zo?usp=sharing)    |
 
 <!--[A1 HW Solutions](https://colab.research.google.com/drive/15CU5xIbta0wlowBhBX4hSk7-N8a6V3B7?usp=sharing)-->
 
 ---
-## Date TBD:
+## Assignment 2: Linear Models
 
   - Activities:
   
-    | Sno. | Classwork | Homework | HW solutions |
+    | Sno. | Classwork | Homework |
     |----------------|-----------|----------|-----------------------|
     | A2             |[A2 CW](https://colab.research.google.com/drive/1CSoK4W2DEbnBuUuUf0HvXeuzvSok8wEq?usp=sharing)    | [A2 HW](https://colab.research.google.com/drive/1nE2xYojSSHCMp77gDr8fxXg591Nr6agk?usp=sharing) |
     | A3             |[A3 CW](https://colab.research.google.com/drive/1Ew5K-bpe40GIA9wZUiSIYPSvnAR3iWEG?usp=sharing)    | [A3 HW](https://colab.research.google.com/drive/1jqYg2cOts4Oe-mF6JqsbQzREmjDlo24d?usp=sharing) |
