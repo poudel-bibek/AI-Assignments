@@ -1,4 +1,4 @@
-<!doctype html>
+<!--- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -17,5 +17,39 @@
         my footer
       </div>
     </footer>
+  </body>
+</html>
+--->
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---<link rel="shortcut icon" type="image/png" href="/favicon.png">--->
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      {% if site.title and site.title != page.title %}
+      <div class="header"><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></div>
+      {% endif %}
+
+      {{ content }}
+
+      <div style="text-align: center; font-size: .75em; border-top: 2px solid #eaecef; margin-top: 32px">
+        &copy; <a href="https://sdflem.github.io/">Scott D. Fleming</a> 2017&ndash;2018 &bull; Made with <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a>
+      </div>
+
+      {% if site.github.private != true and site.github.license %}
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. {% github_edit_link "Improve this page" %}.
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
   </body>
 </html>
