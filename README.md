@@ -10,7 +10,10 @@ TA: [Bibek Poudel](https://poudel-bibek.github.io)
   - [Demo upload video]() 
 
 ## Assignment 2: To be decided
-
+  - 
+  - 
+  - 
+  
 ----
 ## Support and Contact
   - Join the class [Discord Server](https://discord.gg/pGbxNGNT)
