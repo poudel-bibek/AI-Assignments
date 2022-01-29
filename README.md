@@ -1,6 +1,6 @@
 Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
-![alt text](assets/img_1.png)
+![alt text](assets/img_1.jpg)
 
 ## [General instructions](instructions.md)
 
