@@ -1,4 +1,4 @@
-## COMP/EECE 4720/6720 Intro to Artificial Intelligence (Spring 2022)
+# COMP/EECE 4720/6720 Intro to Artificial Intelligence (Spring 2022)
 
 ![alt text](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/assets/css/img_1.jpg?raw=true)
 
