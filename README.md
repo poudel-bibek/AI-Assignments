@@ -2,7 +2,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/)
 
 TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
-----
+
 
 ## Assignment 1: Wed 2/4
   - [Slides]()
@@ -13,6 +13,7 @@ TA: [Bibek Poudel](https://poudel-bibek.github.io)
   - 
   - 
   - 
+  
   
 ----
 ## Support and Contact
