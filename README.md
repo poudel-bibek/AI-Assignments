@@ -5,7 +5,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 
 ## Feb/4, Wed: 
   - [Slides]()
-  - Assignment 1 Classwork: [GitHub](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb) [Colab](https://colab.research.google.com/github/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)
+  - Assignment 1 Classwork: [GitHub](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb), [Colab](https://colab.research.google.com/github/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)
   - [Demo upload video]() 
   - Assignment 1 Homework:
   
