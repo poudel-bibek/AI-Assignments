@@ -11,10 +11,10 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
   - Activities:
   
   
-    | Assignment no. | Classwork | Homework | HW solutions |
+    | Sno. | Classwork | Homework | HW solutions |
     |----------------|-----------|----------|-----------------------|
-    | A1             |[Colab](https://colab.research.google.com/github/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)    | A1 HW    | A1 HW Solutions       |
-    | A2             |[Colab](https://colab.research.google.com/github/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)    | A2 HW    | A1 HW Solutions       |
+    | A1             |[A1 CW Colab](https://colab.research.google.com/github/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)    | A1 HW Colab  | A1 HW Solutions       |
+    | A2             |[A2 CW Colab](https://colab.research.google.com/github/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)    | A2 HW Colab   | A2 HW Solutions       |
 
 ---
 ## To be decided
