@@ -1,5 +1,4 @@
-Instructor: [Weizi Li](https://weizi-li.github.io/)
-TA: [Bibek Poudel](https://poudel-bibek.github.io)
+Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
 
 ## [General instructions](instructions.md)
