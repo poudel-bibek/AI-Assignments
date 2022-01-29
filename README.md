@@ -4,6 +4,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 
 ## [General instructions](instructions.md)
 
+---
 ## Feb/4, Wed: 
   
   - [Demo upload video](), [Slides]()
