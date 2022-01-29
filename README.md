@@ -1,5 +1,24 @@
 ## Welcome to GitHub Pages
 
+Instructor: [Weizi Li](https://weizi-li.github.io/)
+
+TA: [Bibek Poudel](https://poudel-bibek.github.io)
+
+
+----
+
+## Wed 2/4
+  - [Slides]
+  - [Colab Notebook](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)
+  - [Demo upload video]() 
+
+----
+## Support and Contact
+- Join the class [Discord Server](https://discord.gg/pGbxNGNT)
+- Email me (bpoudel at memphis.edu)
+
+
+
 You can use the [editor on GitHub](https://github.com/poudel-bibek/Intro-to-AI-Assignments/edit/gh-pages/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
