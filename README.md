@@ -1,5 +1,3 @@
-![Octocat](large_icon.png)
-
 Instructor: [Weizi Li](https://weizi-li.github.io/)
 
 TA: [Bibek Poudel](https://poudel-bibek.github.io)
