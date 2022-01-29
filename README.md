@@ -12,6 +12,11 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
   - Assignment 2 Homework: (Available after you submit) 
   - [Demo upload video](), [Slides]()
   
+  | Assignment no. | Instructions | Classwork | Homework | Solutions to Homework |
+|----------------|--------------|-----------|----------|-----------------------|
+| 1              | A1 instr     | A1 CW     | A1 HW    | A1 HW Solutions       |
+| 2              | A2 instr     | A2 CW     | A2 CW    | A1 HW Solutions       |
+
 ---
 ## To be decided
   - 
