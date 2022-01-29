@@ -1,6 +1,7 @@
 Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
 ![alt text](assets/img_1.jpg)
+![alt text](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/assets/css/img_1.jpg?raw=true)
 
 ## [General instructions](instructions.md)
 
