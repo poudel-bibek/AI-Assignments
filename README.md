@@ -1,5 +1,6 @@
 Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
+![Thumbnail of Primer](assets/img_1.png)
 
 ## [General instructions](instructions.md)
 
@@ -7,6 +8,8 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
   
   - [Demo upload video](), [Slides]()
   - Activities:
+  
+  
     | Assignment no. | Instructions | Classwork | Homework | Solutions to Homework |
     |----------------|--------------|-----------|----------|-----------------------|
     | A1              | [A1 instr](https://paper.dropbox.com/doc/Assignment-1-Machine-Learning-Basics--Ba6h_U6fDRzTP3YUeNTx_Q8lAg-i6SXrJ11ZvEacbKrWzU7u)     | [GitHub](https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb), [Colab](https://colab.research.google.com/github/poudel-bibek/Intro-to-AI-Assignments/blob/main/A1_class.ipynb)     | A1 HW    | A1 HW Solutions       |
