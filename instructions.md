@@ -1,5 +1,5 @@
 <br>
-:scroll: # Instructions 
+# 📜 Instructions 
 <br>
 
 ## General
