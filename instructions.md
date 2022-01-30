@@ -1,6 +1,6 @@
 <br>
 
-# 📜 Instructions 
+# 📜 Assignment Instructions 
 
 ## General
   - In the class, you are expected 
