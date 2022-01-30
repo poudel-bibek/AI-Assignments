@@ -2,8 +2,6 @@
 
 # 📜 Instructions 
 
-<br>
-
 ## General
 - In the class, you are expected 
 - Solutions to each assignments will be provided after class
