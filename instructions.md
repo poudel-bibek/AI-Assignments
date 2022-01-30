@@ -3,32 +3,36 @@
 # 📜 Instructions 
 
 ## General
-- In the class, you are expected 
-- Solutions to each assignments will be provided after class
+  - In the class, you are expected 
+  - Solutions to each assignments will be provided after class
   - Multiple assignments can be covered in the same day
   - Each assignment is worth 5% of the final grades 
   - For each assignment, will have a task, you are expected to submit a video
+  
+---
+## How to succeed?
+- 
  
+---
 ## What will you need?
   - An account with [Google](https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp): For Video submission on [YouTube](https://youtu.be/dQw4w9WgXcQ?t=0) and code your solutions in [Colab](https://colab.research.google.com/).
-  - 
 
-## How to succeed?
-  - 
 
-## Explanation video length and content
-  - Minimum length: 3 minutes
-  - Content: 
-
-## How to create a video
+---
+## How to create an explanation video?
   - Use the screen record feature on [Zoom](https://zoom.us/)
   - Make sure you have "Picture in picture" i.e., you share both the screen and yourself talking from the webcam
   
-## How to submit your explanation video
+---
+## What to include in your explanation video?
+  - Minimum length: 3 minutes
+  - Content: 
+  - Demo
+  
+---
+## How to submit your explanation video?
 
   - Upload your recorded video to [YouTube](https://youtu.be/dQw4w9WgXcQ?t=0)
   - Submit the video link to respective assignment folder in e-learn/ canvas
   - Before you submit the link, make sure it works
   
-
-
