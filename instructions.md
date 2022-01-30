@@ -1,8 +1,9 @@
 <br>
+# Instructions 
 :scroll:
 <br>
 
-## General instructions
+## General
 - In the class, you are expected 
 - Solutions to each assignments will be provided after class
   - Multiple assignments can be covered in the same day
