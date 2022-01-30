@@ -6,9 +6,9 @@
 Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
 - [General instructions](instructions.md)
-- [Demo explaination video]()
 - [Intro slides]()
 
+---
 ## Assignment 0: Demo
   
   - [Task](https://colab.research.google.com/drive/1LhCm0wje6OgzFyLYF6Z1R373qhLHkHO4?usp=sharing)
@@ -16,7 +16,6 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
   - Explanation video
  
 ---
-
 ## Assignment 1: Machine Learning Basics
   
   - [Task](https://colab.research.google.com/drive/1fDAIPerBr8kEvEEFzgaPf24Lop8tk9uZ?usp=sharing)
