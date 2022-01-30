@@ -1,7 +1,5 @@
 <br>
-
-# Instructions 
-:scroll:
+# :scroll: Instructions 
 <br>
 
 ## General
