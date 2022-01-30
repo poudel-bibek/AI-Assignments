@@ -1,4 +1,6 @@
-## General instructions
+## General instructions\
+- In the class, you are expected 
+- Solutions to each assignments will be provided after class
   - Multiple assignments can be covered in the same day
   - Each assignment is worth 5% of the final grades 
   - For each assignment, will have a task, you are expected to submit a video
@@ -16,7 +18,7 @@
 
 ## How to create a video
   - Use the screen record feature on [Zoom](https://zoom.us/)
-  - Make sure you have "Picture in picture" i.e., you share both the screen and yourself
+  - Make sure you have "Picture in picture" i.e., you share both the screen and yourself talking from the webcam
   
 ## How to submit your explanation video
 
@@ -25,4 +27,4 @@
   - Before you submit the link, make sure it works
   
 
-- Solutions to each assignments will be available after class
+
