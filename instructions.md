@@ -12,7 +12,7 @@
   
 ## How to submit your explanation video
 
-  - Upload your recorded video to [YouTube](https://www.youtube.com/)
+  - Upload your recorded video to [YouTube](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
   - Submit the video link to respective assignment folder in e-learn/ canvas
   - Before you submit the link, make sure it works
   
