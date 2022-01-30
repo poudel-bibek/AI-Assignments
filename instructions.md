@@ -24,3 +24,5 @@
   - Submit the video link to respective assignment folder in e-learn/ canvas
   - Before you submit the link, make sure it works
   
+
+- Solutions to each assignments will be available after class
