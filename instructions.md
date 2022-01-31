@@ -36,6 +36,7 @@
   - Submit the video link to respective assignment folder in e-learn/ canvas
   - Before you submit the link, make sure it works
   
+---
 ## Do's
 
 ✅ A
@@ -44,7 +45,7 @@
 
 ✅ C
 
-
+---
 ## Don'ts
 
 ❌ D
