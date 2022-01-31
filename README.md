@@ -19,7 +19,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 1: Machine Learning Basics
   
   - [Task](https://colab.research.google.com/drive/1fDAIPerBr8kEvEEFzgaPf24Lop8tk9uZ?usp=sharing)
-  - <a href="https://github.com/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/after_class.md"><span class="custom-style">Solution</span></a>
+  - [<span class="custom-style">Solution</span>](after_class.md)
  
 <!--[A1 Solution](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing)-->
 
@@ -27,7 +27,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 2: Linear Models
 
   - [Task](https://colab.research.google.com/drive/17anz72YbO3cnM3ry9wy4aDCLyGYWqxQL?usp=sharing)
-  - <a href="./after_class.md"><span class="custom-style">Solution</span></a>
+  - [<span class="custom-style">Solution</span>](after_class.md)
   
  <!--[A2 Solution](https://colab.research.google.com/drive/1y3m0rTYrSEvFRPbIPgYuxrTcYKi89GQG?usp=sharing)-->
  
