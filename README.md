@@ -27,7 +27,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 2: Linear Models
 
   - [Task](https://colab.research.google.com/drive/17anz72YbO3cnM3ry9wy4aDCLyGYWqxQL?usp=sharing)
-  - <a href="after_class.md"><span class="custom-style">Solution</span></a>
+  - <a href="./after_class.md"><span class="custom-style">Solution</span></a>
   
  <!--[A2 Solution](https://colab.research.google.com/drive/1y3m0rTYrSEvFRPbIPgYuxrTcYKi89GQG?usp=sharing)-->
  
