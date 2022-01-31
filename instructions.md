@@ -3,9 +3,10 @@
 # 📜 Assignment Instructions 
 
 ## General
-  - In the class, you are expected to work on assignment 'tasks'
+  - In the class, you are expected to work on assignment Tasks 
+  - After class, a solution to the task will be available in the assignments website
+  - You are required to submit a video explpaining the solution to each assignment
   - Multiple assignments can be covered in the same day
-  - For each assignment, will have a task, you are expected to submit a video
   - To avoid dependency management issues, you are required to work in [Colab](https://colab.research.google.com/). Please take some time to get familiar with it.
   
 ---
@@ -15,8 +16,7 @@
  
 ---
 ## What will you need?
-  - An account with [Google](https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp): For Video submission on [YouTube](https://youtu.be/dQw4w9WgXcQ?t=0) and code your solutions in [Colab](https://colab.research.google.com/).
-
+  - An account with [Google](https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp): for Video submission on [YouTube](https://youtu.be/dQw4w9WgXcQ?t=0) and coding environment in [Colab](https://colab.research.google.com/).
 
 ---
 ## How to create an explanation video?
@@ -31,17 +31,17 @@
   
 ---
 ## How to submit your explanation video?
-
-  - Upload your recorded video to [YouTube](https://youtu.be/dQw4w9WgXcQ?t=0)
+  - Upload your recorded video to [YouTube](https://youtu.be/dQw4w9WgXcQ?t=0). 
+  - For your privacy, you can publish your videos as [unlisted](https://nbviewer.org/github/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/assets/css/unlisted.png). Only the people with the link will be able to see it.
   - Submit the video link to respective assignment folder in e-learn/ canvas
-  - Before you submit the link, make sure it works
+  - Before you submit the link, please make sure it works
   
 ---
 ## Do's
 
-✅ Dicuss assignments with your classmates in-person during class or in the class Discord server
+✅ Dicuss assignments with your neighbors in class (seated left, right) or with classmates in the class Discord server
 
-✅ Get help from the instructor or TA during class, if you get stuck 
+✅ Get help from the instructor or TA during class if you get stuck or have trouble understanding the task description
 
 ---
 ## Don'ts
