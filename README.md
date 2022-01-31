@@ -20,7 +20,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
   
   - [Task](https://colab.research.google.com/drive/1fDAIPerBr8kEvEEFzgaPf24Lop8tk9uZ?usp=sharing)
   - [Solution](after_class.md)
-  - [red and **bold**]{color="red"}
+  - #=- Stationary Store Moves -=#
  
 <!--[A1 Solution](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing)-->
 
