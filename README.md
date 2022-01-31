@@ -6,7 +6,7 @@
 Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
 - [Instructions](instructions.md)
-- [Intro slides]()
+- [Intro slides](bots.md)
 
 ---
 ## Assignment 0: Demo
