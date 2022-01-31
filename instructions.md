@@ -2,6 +2,7 @@
 
 # 📜 Assignment Instructions 
 
+---
 ## General
   - In the class, you are expected to work on assignment Tasks 
   - After class, a solution to the task will be available in the assignments website
