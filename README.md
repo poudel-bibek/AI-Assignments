@@ -13,7 +13,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
   
   - [Task](https://colab.research.google.com/drive/1LhCm0wje6OgzFyLYF6Z1R373qhLHkHO4?usp=sharing)
   - [Solution](https://colab.research.google.com/drive/1DCHnrJhFzRJGcNhJ770ulZjaivoaYZoW?usp=sharing)
-  - [Explanation video]()
+  - [Explanation video](https://youtu.be/yC_VRmdHeXs)
  
 ---
 ## Assignment 1: Machine Learning Basics
