@@ -7,16 +7,16 @@
   - After class, a solution to the task will be available in the assignments website
   - You are required to submit a video explpaining the solution to each assignment
   - Multiple assignments can be covered in the same day
-  - To avoid dependency management issues, you are required to work in [Colab](https://colab.research.google.com/). Please take some time to get familiar with it.
+  - To avoid dependency management issues, you are required to work in [Colab](https://colab.research.google.com/), please take some time to get familiar with it
   
 ---
 ## How to succeed?
-  - Suffering may be a natural consequence of learning something new, it will get better if you stick to it.
-  - If you feel like you are learning something new each week, its a good indicator of your success with Assignments.
+  - Suffering may be a natural consequence of learning something new, it will get better if you stick to it
+  - If you feel like you are learning something new each week, its a good indicator of your success with Assignments
  
 ---
 ## What will you need?
-  - An account with [Google](https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp): for Video submission on [YouTube](https://youtu.be/dQw4w9WgXcQ?t=0) and coding environment in [Colab](https://colab.research.google.com/).
+  - An account with [Google](https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp): for Video submission on [YouTube](https://youtu.be/dQw4w9WgXcQ?t=0) and coding environment in [Colab](https://colab.research.google.com/)
 
 ---
 ## How to create an explanation video?
