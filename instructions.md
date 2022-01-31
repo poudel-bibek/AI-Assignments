@@ -28,7 +28,7 @@
 ## What to include in your explanation video?
   - The minimum length of each explanation video is 3 minutes
   - Explain your understanding of the solution code in relation to the task/ problem  
-  - Please go through the demo [video]() for reference
+  - Please go through the demo [video](https://youtu.be/yC_VRmdHeXs) for reference
   
 ---
 ## How to submit your explanation video?
