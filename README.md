@@ -35,7 +35,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 3: Non-Linear Models
 
   - [Task](https://colab.research.google.com/drive/1WZFbN8GbXK9OwfS0rE74LVM2ZqT6wWR7?usp=sharing)
-  - <span class="custom-style">[Solution](after_class.md)</span>
+  - [<span class="custom-style">Solution</span>](after_class.md)
   
  <!--[A3 Solution](https://colab.research.google.com/drive/1G6HND9_p6HE0GCEaCpflt85ngOMqZdn4?usp=sharing)-->
  
