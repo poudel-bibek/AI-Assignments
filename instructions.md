@@ -6,7 +6,7 @@
 ## General
   - In the class, you are expected to work on assignment Tasks 
   - After class, a solution to the task will be available in the assignments website
-  - You are required to submit a video explpaining the solution to each assignment
+  - You are required to submit a video explaining the solution to each assignment
   - Multiple assignments can be covered in the same day
   - To avoid dependency management issues, you are required to work in [Colab](https://colab.research.google.com/), please take some time to get familiar with it
   
