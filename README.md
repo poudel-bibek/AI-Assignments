@@ -12,14 +12,14 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 0: Demo
   
   - [Task](https://colab.research.google.com/drive/1LhCm0wje6OgzFyLYF6Z1R373qhLHkHO4?usp=sharing)
-  - <p class= text-gray>[Solution](https://colab.research.google.com/drive/1DCHnrJhFzRJGcNhJ770ulZjaivoaYZoW?usp=sharing)</p>
+  - [Solution](https://colab.research.google.com/drive/1DCHnrJhFzRJGcNhJ770ulZjaivoaYZoW?usp=sharing)
   - [Explanation video](https://youtu.be/yC_VRmdHeXs)
  
 ---
 ## Assignment 1: Machine Learning Basics
   
   - [Task](https://colab.research.google.com/drive/1fDAIPerBr8kEvEEFzgaPf24Lop8tk9uZ?usp=sharing)
-  - [Solution](after_class.md)
+  - [\textcolor{red}{Solution}](after_class.md)
  
 <!--[A1 Solution](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing)-->
 
