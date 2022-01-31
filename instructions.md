@@ -39,7 +39,7 @@
 ---
 ## Do's
 
-✅ Dicuss assignments with your neighbors in class (seated left, right) or with classmates in the class Discord server
+✅ Dicuss assignments with your neighbors in class (seated left, right) or with other classmates in the class [Discord server](https://discord.com/invite/pGbxNGNT)
 
 ✅ Get help from the instructor or TA during class if you get stuck or have trouble understanding the task description
 
