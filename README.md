@@ -12,7 +12,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 0: Demo
   
   - [Task](https://colab.research.google.com/drive/1LhCm0wje6OgzFyLYF6Z1R373qhLHkHO4?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1DCHnrJhFzRJGcNhJ770ulZjaivoaYZoW?usp=sharing)
+  - <p class= text-gray>[Solution](https://colab.research.google.com/drive/1DCHnrJhFzRJGcNhJ770ulZjaivoaYZoW?usp=sharing)</p>
   - [Explanation video](https://youtu.be/yC_VRmdHeXs)
  
 ---
