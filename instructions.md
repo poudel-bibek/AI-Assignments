@@ -32,7 +32,7 @@
 ---
 ## How to submit your explanation video?
   - Upload your recorded video to [YouTube](https://youtu.be/dQw4w9WgXcQ?t=0). 
-  - For your privacy, you can publish your videos as [unlisted](https://nbviewer.org/github/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/assets/css/unlisted.png). Only the people with the link will be able to see it.
+  - For your privacy, you can publish your videos as [unlisted](https://nbviewer.org/github/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/assets/css/unlisted.png); Only the people with the link will be able to see it
   - Submit the video link to respective assignment folder in e-learn/ canvas
   - Before you submit the link, please make sure it works
   
