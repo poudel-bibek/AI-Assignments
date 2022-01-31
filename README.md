@@ -19,7 +19,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 1: Machine Learning Basics
   
   - [Task](https://colab.research.google.com/drive/1fDAIPerBr8kEvEEFzgaPf24Lop8tk9uZ?usp=sharing)
-  - <div class="text-gray"><a href="after_class.md">Solution</a></div>
+  - <span style="color:gray"><a href="after_class.md">Solution</a></span>
   - <p>Some Markdown text with <span style="color:red"><a href="after_class.md">Solution</a> <em><a href="after_class.md">Solution</a></em> <a href="after_class.md">Solution</a></span>.</p>
  
 <!--[A1 Solution](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing)-->
