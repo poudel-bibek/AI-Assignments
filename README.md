@@ -6,7 +6,7 @@
 Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://poudel-bibek.github.io)
 
 - [Instructions](instructions.md)
-- [Intro slides](bots.md)
+- [Intro slides](https://nbviewer.org/github/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/Slides_1.pdf)
 
 ---
 ## Assignment 0: Demo
