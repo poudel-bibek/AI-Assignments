@@ -11,7 +11,7 @@
 ---
 ## After-class Activity
   - After class, a solution to the assignment will be provided
-  - You need to submit an explanation video of the provided solution to YouTube
+  - You need to submit an explanation video of the provided solution to [YouTube](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
   - For your privacy, you can publish your videos as [unlisted](https://nbviewer.org/github/poudel-bibek/Intro-to-AI-Assignments/blob/gh-pages/assets/css/unlisted.png) (only the people with the link will be able to see it)
   - Submit the video link (please make sure the link works) to respective assignment folder in eCourseware/Canvas
  
