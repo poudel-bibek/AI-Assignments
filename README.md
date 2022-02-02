@@ -65,7 +65,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
  <!--[A6 Solution]()-->
  
  ---
-## Assignment 7: Non-Linear Models
+## Assignment 7: Autoencoder and Variational Autoencoder
 
   - [<span class="custom-style">Task</span>](bots.md)
   - [<span class="custom-style">Solution</span>](bots.md)
