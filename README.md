@@ -19,7 +19,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 1: Machine Learning Basics
   
   - [Task](https://colab.research.google.com/drive/1fDAIPerBr8kEvEEFzgaPf24Lop8tk9uZ?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing)
+  - [Solution](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing) (Explanation video due at 11:59PM on Wed, Feb 9)
 <!--   - [<span class="custom-style">Solution</span>](after_class.md) (Explanation video due at 11:59PM on Wed, Feb 9) -->
  
 <!--[A1 Solution](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing)-->
