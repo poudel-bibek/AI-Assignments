@@ -40,6 +40,62 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
   
  <!--[A3 Solution](https://colab.research.google.com/drive/1G6HND9_p6HE0GCEaCpflt85ngOMqZdn4?usp=sharing)-->
  
+ ---
+## Assignment 4: Convolutional Neural Networks
+
+  - [<span class="custom-style">Task</span>](bots.md)
+  - [<span class="custom-style">Solution</span>](bots.md)
+  
+ <!--[A4 Solution]()-->
+ 
+ ---
+## Assignment 5: Long-Short Term Memory
+
+  - [<span class="custom-style">Task</span>](bots.md)
+  - [<span class="custom-style">Solution</span>](bots.md)
+  
+ <!--[A5 Solution]()-->
+ 
+ ---
+## Assignment 6: Clustering
+
+  - [<span class="custom-style">Task</span>](bots.md)
+  - [<span class="custom-style">Solution</span>](bots.md)
+  
+ <!--[A6 Solution]()-->
+ 
+ ---
+## Assignment 7: Non-Linear Models
+
+  - [<span class="custom-style">Task</span>](bots.md)
+  - [<span class="custom-style">Solution</span>](bots.md)
+  
+ <!--[A7 Solution]()-->
+ 
+ ---
+## Assignment 8: Bandits
+
+  - [<span class="custom-style">Task</span>](bots.md)
+  - [<span class="custom-style">Solution</span>](bots.md)
+  
+ <!--[A8 Solution]()-->
+ 
+ ---
+## Assignment 9: Non-Linear Models
+
+  - [<span class="custom-style">Task</span>](bots.md)
+  - [<span class="custom-style">Solution</span>](bots.md)
+  
+ <!--[A9 Solution]()-->
+ 
+ ---
+## Assignment 10: Non-Linear Models
+
+  - [<span class="custom-style">Task</span>](bots.md)
+  - [<span class="custom-style">Solution</span>](bots.md)
+  
+ <!--[A10 Solution]()-->
+ 
 ---
 ## Support and Contact
   - Join the class [Discord Server](https://discord.gg/pGbxNGNT)
