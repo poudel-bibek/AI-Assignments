@@ -81,7 +81,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
  <!--[A8 Solution]()-->
  
  ---
-## Assignment 9: Non-Linear Models
+## Assignment 9: Q-Learning
 
   - [<span class="custom-style">Task</span>](bots.md)
   - [<span class="custom-style">Solution</span>](bots.md)
@@ -89,7 +89,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
  <!--[A9 Solution]()-->
  
  ---
-## Assignment 10: Non-Linear Models
+## Assignment 10: Deep Q-Networks
 
   - [<span class="custom-style">Task</span>](bots.md)
   - [<span class="custom-style">Solution</span>](bots.md)
