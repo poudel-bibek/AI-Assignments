@@ -59,10 +59,10 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
  <!--[A5 Solution]()-->
  
  ---
-## Assignment 6: Clustering
-
-  - [<span class="custom-style">Task</span>](bots.md)
-  - [<span class="custom-style">Solution</span>](bots.md)
+## ~~Assignment 6: Clustering~~ 
+  - Canceled, everybody gets full credit 
+<!--   - [<span class="custom-style">Task</span>](bots.md)
+  - [<span class="custom-style">Solution</span>](bots.md) -->
   
  <!--[A6 Solution]()-->
  
