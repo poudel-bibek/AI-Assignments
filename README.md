@@ -61,6 +61,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
  ---
 ## ~~Assignment 6: Clustering~~ 
   - Canceled, everybody gets full credit 
+  
 <!--   - [<span class="custom-style">Task</span>](bots.md)
   - [<span class="custom-style">Solution</span>](bots.md) -->
   
