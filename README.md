@@ -30,7 +30,8 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 2: Linear Models
 
   - [Task](https://colab.research.google.com/drive/17anz72YbO3cnM3ry9wy4aDCLyGYWqxQL?usp=sharing)
-  - [<span class="custom-style">Solution</span>](after_class.md) (Explanation video due at 11:59PM on Mon, Feb 14)
+  - [Solution](https://colab.research.google.com/drive/1y3m0rTYrSEvFRPbIPgYuxrTcYKi89GQG?usp=sharing) (Explanation video due at 11:59PM on Mon, Feb 14)
+<!--   - [<span class="custom-style">Solution</span>](after_class.md)  -->
   
  <!--[A2 Solution](https://colab.research.google.com/drive/1y3m0rTYrSEvFRPbIPgYuxrTcYKi89GQG?usp=sharing)-->
  
@@ -38,8 +39,9 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 3: Non-Linear Models
 
   - [Task](https://colab.research.google.com/drive/1WZFbN8GbXK9OwfS0rE74LVM2ZqT6wWR7?usp=sharing)
-  - [<span class="custom-style">Solution</span>](after_class.md) (Explanation video due at 11:59PM on Mon, Feb 14)
-  
+  - [Solution](https://colab.research.google.com/drive/1G6HND9_p6HE0GCEaCpflt85ngOMqZdn4?usp=sharing) (Explanation video due at 11:59PM on Mon, Feb 14)
+<!--   - [<span class="custom-style">Solution</span>](after_class.md) (Explanation video due at 11:59PM on Mon, Feb 14)
+   -->
  <!--[A3 Solution](https://colab.research.google.com/drive/1G6HND9_p6HE0GCEaCpflt85ngOMqZdn4?usp=sharing)-->
  
  ---
