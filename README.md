@@ -85,7 +85,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
   
  <!--[A8 Solution]()-->
  
- ---
+ --- 
 ## Assignment 9: Q-Learning
 
   - [<span class="custom-style">Task</span>](bots.md)
