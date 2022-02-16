@@ -48,7 +48,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 4: Convolutional Neural Networks
 
   - [Task](https://colab.research.google.com/drive/1hkTt5V4J35mFux3EXI2QuCpOWrTy98Q3?usp=sharing)
-  - [<span class="custom-style">Solution</span>](bots.md)
+  - [<span class="custom-style">Solution</span>](after_class.md) (Explanation video due at 11:59PM on Mon, Feb 23)
   
  <!--[A4 Solution]()-->
  
