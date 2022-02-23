@@ -55,8 +55,8 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
  ---
 ## Assignment 5: Long-Short Term Memory
 
-  - [<span class="custom-style">Task</span>](bots.md)
-  - [<span class="custom-style">Solution</span>](bots.md)
+  - [Task](https://colab.research.google.com/drive/1EJ52aPPNvO_r-0GGSE6vpVwKzo4kn6gg?usp=sharing)
+  - [<span class="custom-style">Solution</span>](after_class.md)
   
  <!--[A5 Solution]()-->
  
