@@ -56,7 +56,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 5: Long-Short Term Memory
 
   - [Task](https://colab.research.google.com/drive/1EJ52aPPNvO_r-0GGSE6vpVwKzo4kn6gg?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1C-mfEuundoSIOCSaZ_WBRed0pSHZjf34?usp=sharing) (Explanation video due at 11:59PM on Wed, Mar 2)
+  - [Solution](https://colab.research.google.com/drive/1C-mfEuundoSIOCSaZ_WBRed0pSHZjf34?usp=sharing) ~~(Explanation video due at 11:59PM on Wed, Mar 2)~~
   
 
  <!--[A5 Solution]()-->
