@@ -101,7 +101,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
   - [<span class="custom-style">Solution</span>](bots.md)
   
  <!--[A10 Solution]()-->
- 
+  
 ---
 ## Support and Contact
   - Join the class [Discord Server](https://discord.gg/pGbxNGNT)
