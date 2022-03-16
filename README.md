@@ -73,10 +73,10 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
  ---
 ## Assignment 7: AutoEncoder and Variational AutoEncoder
 
-  - [<span class="custom-style">Task</span>](bots.md)
-  - [<span class="custom-style">Solution</span>](bots.md)
+  - [Task](https://colab.research.google.com/drive/1KncjK0LEvsBc5gI3ihxPcnrN8pt7J9hR?usp=sharing)
+  - [<span class="custom-style">Solution</span>](after_class.md)
   
- <!--[A7 Solution]()-->
+ <!--[A7 Solution](https://colab.research.google.com/drive/1EDSTnNeAIHDbAGgB1nUFW-Li0B2x0tCi?usp=sharing)-->
  
  ---
 ## Assignment 8: Bandits
