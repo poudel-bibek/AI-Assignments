@@ -81,8 +81,8 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
  ---
 ## Assignment 8: Bandits
 
-  - [<span class="custom-style">Task</span>](bots.md)
-  - [<span class="custom-style">Solution</span>](bots.md)
+  - [Task](https://colab.research.google.com/drive/1M3Ah0MhHA40BJGOX03DbOA1_tQFOeIsc?usp=sharing)
+  - [<span class="custom-style">Solution</span>](after_class.md)
   
  <!--[A8 Solution]()-->
  
