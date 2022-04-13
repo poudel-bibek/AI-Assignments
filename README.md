@@ -82,7 +82,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 8: Bandits
 
   - [Task](https://colab.research.google.com/drive/1M3Ah0MhHA40BJGOX03DbOA1_tQFOeIsc?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1qL5XTvZxOSGz__Q5DHfFW88kggx2uLsh?usp=sharing)  ~~(Explanation video due at 11:59PM on Wed, April 6) ~~
+  - [Solution](https://colab.research.google.com/drive/1qL5XTvZxOSGz__Q5DHfFW88kggx2uLsh?usp=sharing)  ~~(Explanation video due at 11:59PM on Wed, April 6)~~
   
  <!--[A8 Solution]()-->
  
