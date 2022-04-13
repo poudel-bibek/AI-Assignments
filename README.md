@@ -89,8 +89,8 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
  --- 
 ## Assignment 9: Q-Learning
 
-  - [<span class="custom-style">Task</span>](bots.md)
-  - [<span class="custom-style">Solution</span>](bots.md)
+  - [Task](https://colab.research.google.com/drive/1lVf-3YwqQUj-IAsHrlQ2p8eDIOjqXJn4?usp=sharing)
+  - [<span class="custom-style">Solution</span>](after_class.md)
   
  <!--[A9 Solution]()-->
  
