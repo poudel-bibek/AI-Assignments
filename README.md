@@ -90,7 +90,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 9: Q-Learning
 
   - [Task](https://colab.research.google.com/drive/1lVf-3YwqQUj-IAsHrlQ2p8eDIOjqXJn4?usp=sharing)
-  - [<span class="custom-style">Solution</span>](after_class.md) (Explanation video due at 11:59PM on Wed, April 20)
+  - [Solution](https://colab.research.google.com/drive/1pv8DoZ3tWv0bikw3QPTWE2mxjL9Bu5aH?usp=sharing) (Explanation video due at 11:59PM on Wed, April 20)
   
  <!--[A9 Solution]()-->
  
