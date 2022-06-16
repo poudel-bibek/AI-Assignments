@@ -98,7 +98,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 10: Deep Q-Networks
 
   - [Task](https://colab.research.google.com/drive/11dHgtDts7nmvEvkKKlPrN7QgF5DkiDTA?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1K-eEocwxJDQdePv6Dl5hP7PY-q0ueIbG?usp=sharing) (Explanation video due at 11:59PM on Wed, April 27)
+  - [Solution](https://colab.research.google.com/drive/1K-eEocwxJDQdePv6Dl5hP7PY-q0ueIbG?usp=sharing) ~~(Explanation video due at 11:59PM on Wed, April 27)~~
   
  <!--[A10 Solution](https://colab.research.google.com/drive/1K-eEocwxJDQdePv6Dl5hP7PY-q0ueIbG?usp=sharing)-->
   
