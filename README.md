@@ -21,45 +21,36 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 ## Assignment 1: Machine Learning Basics
   
   - [Task](https://colab.research.google.com/drive/1fDAIPerBr8kEvEEFzgaPf24Lop8tk9uZ?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing) ~~(Explanation video due at 11:59PM on Wed, Feb 9)~~
-<!--   - [<span class="custom-style">Solution</span>](after_class.md) (Explanation video due at 11:59PM on Wed, Feb 9) -->
- 
-<!--[A1 Solution](https://colab.research.google.com/drive/1ry2z8OTX90KME9tfMItvmw0RteKlLIiN?usp=sharing)-->
+  - [Solution](after_class.md) ~~(Explanation video due at 11:59PM on Wed, Feb 9)~~ 
 
 ---
 ## Assignment 2: Linear Models
 
   - [Task](https://colab.research.google.com/drive/17anz72YbO3cnM3ry9wy4aDCLyGYWqxQL?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1y3m0rTYrSEvFRPbIPgYuxrTcYKi89GQG?usp=sharing) ~~(Explanation video due at 11:59PM on Mon, Feb 14)~~
-<!--   - [<span class="custom-style">Solution</span>](after_class.md)  -->
-  
- <!--[A2 Solution](https://colab.research.google.com/drive/1y3m0rTYrSEvFRPbIPgYuxrTcYKi89GQG?usp=sharing)-->
+  - [Solution](after_class.md) ~~(Explanation video due at 11:59PM on Mon, Feb 14)~~
+
  
  ---
 ## Assignment 3: Non-Linear Models
 
   - [Task](https://colab.research.google.com/drive/1WZFbN8GbXK9OwfS0rE74LVM2ZqT6wWR7?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1G6HND9_p6HE0GCEaCpflt85ngOMqZdn4?usp=sharing) ~~(Explanation video due at 11:59PM on Mon, Feb 14)~~
-<!--   - [<span class="custom-style">Solution</span>](after_class.md) (Explanation video due at 11:59PM on Mon, Feb 14)
-   -->
- <!--[A3 Solution](https://colab.research.google.com/drive/1G6HND9_p6HE0GCEaCpflt85ngOMqZdn4?usp=sharing)-->
+  - [Solution](after_class.md) ~~(Explanation video due at 11:59PM on Mon, Feb 14)~~
+
  
  ---
 ## Assignment 4: Convolutional Neural Networks
 
   - [Task](https://colab.research.google.com/drive/1hkTt5V4J35mFux3EXI2QuCpOWrTy98Q3?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1-gjuhw8VTC_aGstxBQVr8UzS2b8CmYTq?usp=sharing) ~~(Explanation video due at 11:59PM on Wed, Feb 23)~~
+  - [Solution](after_class.md) ~~(Explanation video due at 11:59PM on Wed, Feb 23)~~
   
- <!--[A4 Solution]()-->
  
  ---
 ## Assignment 5: Long-Short Term Memory
 
   - [Task](https://colab.research.google.com/drive/1EJ52aPPNvO_r-0GGSE6vpVwKzo4kn6gg?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1C-mfEuundoSIOCSaZ_WBRed0pSHZjf34?usp=sharing) ~~(Explanation video due at 11:59PM on Wed, Mar 2)~~
+  - [Solution](after_class.md) ~~(Explanation video due at 11:59PM on Wed, Mar 2)~~
   
 
- <!--[A5 Solution]()-->
  
  ---
 ## ~~Assignment 6: Clustering~~ 
@@ -68,39 +59,34 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 <!--   - [<span class="custom-style">Task</span>](bots.md)
   - [<span class="custom-style">Solution</span>](bots.md) -->
   
- <!--[A6 Solution]()-->
  
  ---
 ## Assignment 7: AutoEncoder and Variational AutoEncoder
 
   - [Task](https://colab.research.google.com/drive/1KncjK0LEvsBc5gI3ihxPcnrN8pt7J9hR?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1EDSTnNeAIHDbAGgB1nUFW-Li0B2x0tCi?usp=sharing) ~~(Explanation video due at 11:59PM on Wed, Mar 23)~~
+  - [Solution](after_class.md) ~~(Explanation video due at 11:59PM on Wed, Mar 23)~~
   
- <!--[A7 Solution](https://colab.research.google.com/drive/1EDSTnNeAIHDbAGgB1nUFW-Li0B2x0tCi?usp=sharing)-->
  
  ---
 ## Assignment 8: Bandits
 
   - [Task](https://colab.research.google.com/drive/1M3Ah0MhHA40BJGOX03DbOA1_tQFOeIsc?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1qL5XTvZxOSGz__Q5DHfFW88kggx2uLsh?usp=sharing)  ~~(Explanation video due at 11:59PM on Wed, April 6)~~
+  - [Solution](after_class.md)  ~~(Explanation video due at 11:59PM on Wed, April 6)~~
   
- <!--[A8 Solution]()-->
  
  --- 
 ## Assignment 9: Q-Learning
 
   - [Task](https://colab.research.google.com/drive/1lVf-3YwqQUj-IAsHrlQ2p8eDIOjqXJn4?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1pv8DoZ3tWv0bikw3QPTWE2mxjL9Bu5aH?usp=sharing) ~~(Explanation video due at 11:59PM on Wed, April 20)~~
+  - [Solution](after_class.md) ~~(Explanation video due at 11:59PM on Wed, April 20)~~
   
- <!--[A9 Solution]()-->
  
  ---
 ## Assignment 10: Deep Q-Networks
 
   - [Task](https://colab.research.google.com/drive/11dHgtDts7nmvEvkKKlPrN7QgF5DkiDTA?usp=sharing)
-  - [Solution](https://colab.research.google.com/drive/1K-eEocwxJDQdePv6Dl5hP7PY-q0ueIbG?usp=sharing) ~~(Explanation video due at 11:59PM on Wed, April 27)~~
+  - [Solution](after_class.md) ~~(Explanation video due at 11:59PM on Wed, April 27)~~
   
- <!--[A10 Solution](https://colab.research.google.com/drive/1K-eEocwxJDQdePv6Dl5hP7PY-q0ueIbG?usp=sharing)-->
   
 ---
 ## Support and Contact
