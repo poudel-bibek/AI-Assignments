@@ -9,5 +9,5 @@ Contains:
 
 ------------------
 ### History
-- [COMP/EECE 4720/6720: Spring 2022 website](https://poudel-bibek.github.io/AI-Assignments/)
+- [Spring 2022: COMP/EECE 4720/6720](https://poudel-bibek.github.io/AI-Assignments/)
 
