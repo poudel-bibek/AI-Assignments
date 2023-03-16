@@ -23,7 +23,7 @@ RL Assignment list:
 7. Proximal Policy Optimization
 8. Exploration Strategies
 
-Contains:
+Repo also contains:
 - Images/ GIF/ Videos
 - Datasets
 - Trained Models
