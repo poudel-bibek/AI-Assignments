@@ -1,4 +1,4 @@
-## Artificial Intelligence  Assignments
+## Machine Learning Assignments
 ------------------
 Setup:
 1. Demo Assignment
