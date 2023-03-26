@@ -87,6 +87,26 @@ def plot_sample_images(images, labels):
             
     plt.show()
 
+def plot_predicted_sample_images(images, true_labels, predicted_labels):
+    fig, ax = plt.subplots(3, 3, figsize=(16, 5), dpi=100)
+    random_9 = np.random.randint(0, len(images), 9)
+
+    for i in range(3):
+        for j in range(3):
+            index = random_9[i * 3 + j]
+            img = images[index]
+            angle = true_labels[index]
+            pred_angle = predicted_labels[index]
+
+            # Ensure the image is a NumPy array with an appropriate data type
+            img_array = np.array(img).astype(np.uint8)
+
+            ax[i][j].imshow(img_array)
+            ax[i][j].set_title(f"Truth: {angle:.2f} Prediction: {pred_angle:.2f}")
+            ax[i][j].axis('off')  # Remove x and y axis labels
+            
+    plt.show()
+
 def plot_training_curve(train_loss_collector, train_epochs):
     fig, ax = plt.subplots(figsize=(16, 5), dpi=100)
     xticks = np.arange(1, train_epochs + 1, 1)
