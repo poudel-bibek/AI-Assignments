@@ -89,7 +89,7 @@ def plot_sample_images(images, labels):
 
 def plot_training_curve(train_loss_collector, train_epochs):
     fig, ax = plt.subplots(figsize=(16, 5), dpi=100)
-    xticks = np.arange(1, train_epochs + 1, 2)
+    xticks = np.arange(1, train_epochs + 1, 1)
 
     ax.set_ylabel("MSE Loss (Training)")
     ax.plot(xticks, np.asarray(train_loss_collector))
