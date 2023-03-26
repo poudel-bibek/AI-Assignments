@@ -61,3 +61,27 @@ class DriveDataset(Dataset):
         target_idx = self.target_list[key]
         # Correct datatype here
         return [image_idx.astype(np.float32), target_idx.astype(np.float32)]
+
+
+def plot_sample_images(images, labels):
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    fig, ax = plt.subplots(3, 3, figsize=(16, 5), dpi=100)
+
+    random_9 = np.random.randint(0, len(images), 9)
+
+    for i in range(3):
+        for j in range(3):
+            index = random_9[i * 3 + j]
+            img = images[index]
+            angle = labels[index]
+
+            # Ensure the image is a NumPy array with an appropriate data type
+            img_array = np.array(img).astype(np.uint8)
+
+            ax[i][j].imshow(img_array)
+            ax[i][j].set_title(f"Steering angle: {angle:.2f}")
+            ax[i][j].axis('off')  # Remove x and y axis labels
+            
+    plt.show()
