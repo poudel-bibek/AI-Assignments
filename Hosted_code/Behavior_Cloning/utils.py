@@ -1,7 +1,12 @@
+
+import os
+import numpy as np
+from PIL import Image
+from torch.utils.data import Dataset
+import numpy as np
+import matplotlib.pyplot as plt
+
 def prepare_data(file_path):
-    import os
-    import numpy as np
-    from PIL import Image
 
     train_images_path = os.path.join(file_path, 'train_images')
     test_images_path = os.path.join(file_path, 'test_images')
@@ -48,7 +53,7 @@ def prepare_data(file_path):
 
     return train_images, train_angles, test_images, test_angles
 
-from torch.utils.data import Dataset
+
 class DriveDataset(Dataset):
     def __init__(self, images, targets):
         self.images_list = images
@@ -64,11 +69,7 @@ class DriveDataset(Dataset):
 
 
 def plot_sample_images(images, labels):
-    import numpy as np
-    import matplotlib.pyplot as plt
-
     fig, ax = plt.subplots(3, 3, figsize=(16, 5), dpi=100)
-
     random_9 = np.random.randint(0, len(images), 9)
 
     for i in range(3):
