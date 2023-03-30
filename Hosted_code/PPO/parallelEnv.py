@@ -102,10 +102,11 @@ def worker(remote, parent_remote, env_fn_wrapper):
         if cmd == 'step':
 
             # Gymnasium update
-            ob, reward, done, truncated,  info = env.step(data)
+            ob, reward, done, truncated, info = env.step(data)
             if done:
                 ob = env.reset()
-            remote.send((ob, reward, done, info))
+            remote.send((ob, reward, done, truncated, info))
+
         elif cmd == 'reset':
             ob = env.reset()
             remote.send(ob)
