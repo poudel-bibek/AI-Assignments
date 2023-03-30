@@ -2,7 +2,7 @@
 # source: Deep Reinforcement Learning Nanodegree, Udacity.
 
 import numpy as np
-import gym
+import gymnasium as gym
 from multiprocessing import Process, Pipe
 from abc import ABC, abstractmethod
 
@@ -120,7 +120,7 @@ def worker(remote, parent_remote, env_fn_wrapper):
 
 
 class parallelEnv(VecEnv):
-    def __init__(self, env_name='PongDeterministic-v4',
+    def __init__(self, env_name='ALE/Pong-v5',
                  n=4, seed=None,
                  spaces=None):
 
