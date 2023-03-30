@@ -161,8 +161,8 @@ class parallelEnv(VecEnv):
     def step_wait(self):
         results = [remote.recv() for remote in self.remotes]
         self.waiting = False
-        obs, rews, dones, infos = zip(*results)
-        return np.stack(obs), np.stack(rews), np.stack(dones), infos
+        obs, rews, truncates, dones, infos = zip(*results)
+        return np.stack(obs), np.stack(rews), np.stack(truncates), np.stack(dones), infos
 
     def reset(self):
         for remote in self.remotes:
