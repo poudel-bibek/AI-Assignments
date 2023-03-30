@@ -50,8 +50,8 @@ def collect_trajectories(envs, policy, tmax=200, nrand=5):
     
     # perform nrand random steps
     for _ in range(nrand):
-        fr1, re1, _, _ = envs.step(np.random.choice([RIGHT, LEFT],n))
-        fr2, re2, _, _ = envs.step([0]*n)#advances game 1 frame by doing nothing.
+        fr1, re1, _, _, _ = envs.step(np.random.choice([RIGHT, LEFT],n))
+        fr2, re2, _, _, _ = envs.step([0]*n)#advances game 1 frame by doing nothing.
     
     for t in range(tmax):
 
@@ -72,8 +72,8 @@ def collect_trajectories(envs, policy, tmax=200, nrand=5):
         
         # advance the game (0=no action)
         # we take one action and skip game forward
-        fr1, re1, is_done, _ = envs.step(action)
-        fr2, re2, is_done, _ = envs.step([0]*n)
+        fr1, re1, is_done, _, _ = envs.step(action)
+        fr2, re2, is_done, _, _ = envs.step([0]*n)
 
         reward = re1 + re2
         
