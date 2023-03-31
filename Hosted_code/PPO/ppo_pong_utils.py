@@ -10,99 +10,97 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np 
 
+# Constants for actions
 RIGHT = 4
 LEFT = 5
 
+# Set the device for PyTorch
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 def preprocess_single(image, bkg_color=np.array([144, 72, 17])):
-    img = np.mean(image[34:-16:2, ::2]-bkg_color, axis=-1)/255.
+    """
+    Preprocess a single image frame by cropping, downscaling, and normalizing.
+    """
+    img = np.mean(image[34:-16:2, ::2] - bkg_color, axis=-1) / 255.
     return img
 
-def preprocess_batch(images, bkg_color = np.array([144, 72, 17])):
+def preprocess_batch(images, bkg_color=np.array([144, 72, 17])):
     """
-    convert outputs of parallelEnv to inputs to pytorch neural net"""
+    Preprocess a batch of images for input to a PyTorch neural network.
+    """
     list_of_images = np.asarray(images)
+    
+    # Ensure the correct number of dimensions
     if len(list_of_images.shape) < 5:
         list_of_images = np.expand_dims(list_of_images, 1)
-    # subtract bkg and crop
-    list_of_images_prepro = np.mean(list_of_images[:,:,34:-16:2,::2]-bkg_color,
-                                    axis=-1)/255.
-    batch_input = np.swapaxes(list_of_images_prepro,0,1)
+    
+    # Subtract background color, crop, and normalize
+    list_of_images_prepro = np.mean(list_of_images[:, :, 34:-16:2, ::2] - bkg_color, axis=-1) / 255.
+    
+    # Swap axes for proper input format
+    batch_input = np.swapaxes(list_of_images_prepro, 0, 1)
+    
     return torch.from_numpy(batch_input).float().to(device)
 
-# Utils
 def collect_trajectories(envs, policy, tmax=200, nrand=5):
-    """collect trajectories for an environment"""
-    # number of parallel instances
-    n=len(envs.ps)
+    """
+    Collect trajectories for an environment using a given policy.
+    """
+    n = len(envs.ps)  # Number of parallel instances
 
-    #initialize returning lists and start the game!
-    state_list=[]
-    reward_list=[]
-    prob_list=[]
-    action_list=[]
+    # Initialize lists for storing results
+    state_list = []
+    reward_list = []
+    prob_list = []
+    action_list = []
 
     envs.reset()
-    
-    # start all parallel agents
-    envs.step([1]*n)
-    
-    # perform nrand random steps
+
+    # Start all parallel agents
+    envs.step([1] * n)
+
+    # Perform nrand random steps
     for _ in range(nrand):
-        fr1, re1, _, _, _ = envs.step(np.random.choice([RIGHT, LEFT],n))
-        fr2, re2, _, _, _ = envs.step([0]*n)#advances game 1 frame by doing nothing.
-    
+        fr1, re1, _, _, _ = envs.step(np.random.choice([RIGHT, LEFT], n))
+        fr2, re2, _, _, _ = envs.step([0] * n)  # Advance game 1 frame by doing nothing.
+
     for t in range(tmax):
+        # Prepare input for policy
+        batch_input = preprocess_batch([fr1, fr2])
 
-        # prepare the input
-        # preprocess_batch properly converts two frames into 
-        # shape (n, 2, 80, 80), the proper input for the policy
-        # this is required when building CNN with pytorch
-        batch_input = preprocess_batch([fr1,fr2])
-        
-        # probs will only be used as the pi_old
-        # no gradient propagation is needed
-        # so we move it to the cpu
+        # Calculate action probabilities (no gradient needed, move to CPU)
         probs = policy(batch_input).squeeze().cpu().detach().numpy()
-        
-        action = np.where(np.random.rand(n) < probs, RIGHT, LEFT)
-        probs = np.where(action==RIGHT, probs, 1.0-probs)
-        
-        
-        # advance the game (0=no action)
-        # we take one action and skip game forward
-        fr1, re1, is_done, _, _ = envs.step(action)
-        fr2, re2, is_done, _, _ = envs.step([0]*n)
 
+        # Determine actions based on probabilities
+        action = np.where(np.random.rand(n) < probs, RIGHT, LEFT)
+        probs = np.where(action == RIGHT, probs, 1.0 - probs)
+
+        # Advance the game by taking one action and skipping one frame
+        fr1, re1, is_done, _, _ = envs.step(action)
+        fr2, re2, is_done, _, _ = envs.step([0] * n)
+
+        # Calculate reward
         reward = re1 + re2
-        
-        # store the result
+
+        # Store results
         state_list.append(batch_input)
         reward_list.append(reward)
         prob_list.append(probs)
         action_list.append(action)
-        
-        # stop if any of the trajectories is done
-        # we want all the lists to be retangular
+
+        # Stop if any trajectory is done (to keep lists rectangular)
         if is_done.any():
             break
 
-
-    # return pi_theta, states, actions, rewards, probability
+    # Return action probabilities, states, actions, and rewards
     return prob_list, state_list, action_list, reward_list
 
-
-#UTILS
 def states_to_prob(policy, states):
     """
-    Convert states to probability, passing through the policy.
-    @Param:
-    1. policy: current policy π.
-    2. states: states pulled from trajectory.
-    @return:
-    probabilities of states occurring.
+    Convert states to probabilities using a given policy.
     """
     states = torch.stack(states)
-    policy_input = states.view(-1,*states.shape[-3:])
+    policy_input = states.view(-1, *states.shape[-3:])
+
+    # Compute the probabilities of the states using the policy
     return policy(policy_input).view(states.shape[:-3])

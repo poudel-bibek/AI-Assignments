@@ -1,4 +1,4 @@
-# taken from openai/baseline
+# taken from openai/baselines: https://github.com/openai/baselines
 # source: Deep Reinforcement Learning Nanodegree, Udacity.
 
 import numpy as np
@@ -8,7 +8,8 @@ from abc import ABC, abstractmethod
 
 class CloudpickleWrapper(object):
     """
-    Uses cloudpickle to serialize contents (otherwise multiprocessing tries to use pickle)
+    A wrapper that uses cloudpickle to serialize the contents, as multiprocessing
+    typically uses pickle by default.
     """
 
     def __init__(self, x):
@@ -24,7 +25,7 @@ class CloudpickleWrapper(object):
 
 class VecEnv(ABC):
     """
-    An abstract asynchronous, vectorized environment.
+    An abstract class representing an asynchronous, vectorized environment.
     """
 
     def __init__(self, num_envs, observation_space, action_space):
@@ -35,55 +36,42 @@ class VecEnv(ABC):
     @abstractmethod
     def reset(self):
         """
-        Reset all the environments and return an array of
-        observations, or a dict of observation arrays.
-        If step_async is still doing work, that work will
-        be cancelled and step_wait() should not be called
-        until step_async() is invoked again.
+        Reset all environments and return an array of observations or a
+        dictionary of observation arrays.
         """
         pass
 
     @abstractmethod
     def step_async(self, actions):
         """
-        Tell all the environments to start taking a step
-        with the given actions.
+        Instruct all environments to take a step with the given actions.
         Call step_wait() to get the results of the step.
-        You should not call this if a step_async run is
-        already pending.
         """
         pass
 
     @abstractmethod
     def step_wait(self):
         """
-        Wait for the step taken with step_async().
-        Returns (obs, rews, dones, infos):
-         - obs: an array of observations, or a dict of
-                arrays of observations.
-         - rews: an array of rewards
-         - dones: an array of "episode done" booleans
-         - infos: a sequence of info objects
+        Wait for the completion of the step taken with step_async().
+        Returns (obs, rews, dones, infos).
         """
         pass
 
     @abstractmethod
     def close(self):
         """
-        Clean up the environments' resources.
+        Release the resources used by the environments.
         """
         pass
 
     def step(self, actions):
         """
-        Step the environments synchronously.
-        This is available for backwards compatibility.
+        Take a step in the environments synchronously.
         """
         self.step_async(actions)
         return self.step_wait()
 
     def render(self, mode='human'):
-        #logger.warn('Render not defined for %s' % self)
         pass
         
     @property
@@ -93,20 +81,16 @@ class VecEnv(ABC):
         else:
             return self
 
-
 def worker(remote, parent_remote, env_fn_wrapper):
     parent_remote.close()
     env = env_fn_wrapper.x
     while True:
         cmd, data = remote.recv()
         if cmd == 'step':
-
-            # Gymnasium update
             ob, reward, done, truncated, info = env.step(data)
             if done:
                 ob = env.reset()
             remote.send((ob, reward, done, truncated, info))
-
         elif cmd == 'reset':
             ob = env.reset()
             remote.send(ob)
@@ -121,30 +105,28 @@ def worker(remote, parent_remote, env_fn_wrapper):
         else:
             raise NotImplementedError
 
-
 class parallelEnv(VecEnv):
     def __init__(self, env_name='ALE/Pong-v5',
                  n=4, seed=None,
                  spaces=None):
 
-        env_fns = [ gym.make(env_name) for _ in range(n) ]
+        # Create gym environments
+        env_fns = [gym.make(env_name) for _ in range(n)]
 
+        # Set seeds for environments, if provided
         if seed is not None:
-            for i,e in enumerate(env_fns):
-                e.seed(i+seed)
-        
-        """
-        envs: list of gym environments to run in subprocesses
-        adopted from openai baseline
-        """
+            for i, e in enumerate(env_fns):
+                e.seed(i + seed)
+
+        # Initialize multiprocessing components
         self.waiting = False
         self.closed = False
         nenvs = len(env_fns)
         self.remotes, self.work_remotes = zip(*[Pipe() for _ in range(nenvs)])
         self.ps = [Process(target=worker, args=(work_remote, remote, CloudpickleWrapper(env_fn)))
-            for (work_remote, remote, env_fn) in zip(self.work_remotes, self.remotes, env_fns)]
+                   for (work_remote, remote, env_fn) in zip(self.work_remotes, self.remotes, env_fns)]
         for p in self.ps:
-            p.daemon = True # if the main process crashes, we should not cause things to hang
+            p.daemon = True  # Ensure subprocesses exit if the main process crashes
             p.start()
         for remote in self.work_remotes:
             remote.close()
@@ -178,7 +160,7 @@ class parallelEnv(VecEnv):
         if self.closed:
             return
         if self.waiting:
-            for remote in self.remotes:            
+            for remote in self.remotes:
                 remote.recv()
         for remote in self.remotes:
             remote.send(('close', None))
