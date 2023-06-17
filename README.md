@@ -10,8 +10,9 @@ ML Assignments list:
 3. Non Linear Models
 4. Convolutional Neural Networks
 5. Autoencoder and Variational AutoEncoder
-6. Long Short Term Memory
-7. Transformers (BERT fine-tuning) 
+6. Stochastic Gradient Descent
+7. Long Short Term Memory
+8. Transformers (BERT fine-tuning) 
 
 RL Assignment list: 
 1. RL Basics
