@@ -22,7 +22,9 @@ def mean_of_list(func):
 
 def preprocessing(data):
     # Turns out img is not the img
-    #print(f"\nImg data: {data}\n")
+    print(f"\nImg data: {data}\n")
+    print(f"Img data type: {type(data)}\n")
+    print(f"Img data shape: {data.shape}\n")
 
     img, _ = data
 
