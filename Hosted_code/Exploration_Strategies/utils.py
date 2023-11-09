@@ -224,6 +224,7 @@ def get_params():
                         help="The flag determines whether to render each agent or not.")
     parser.add_argument("--train_from_scratch", action="store_false",
                         help="The flag determines whether to train from scratch or continue previous tries.")
+    parser.add_argument('-f', '--file', help='Dummy argument for Jupyter')
 
     parser_params = parser.parse_args()
 
