@@ -21,44 +21,53 @@ def mean_of_list(func):
 #     return img
 
 def preprocessing(data):
-    # Turns out img is not the img. Data is a tuple
-    print(f"\nImg data: {data}\n")
-    print(f"Img data type: {type(data)}\n")
-
     if isinstance(data, tuple) and len(data) == 2 and isinstance(data[0], np.ndarray):
         img = data[0]  # Extract the image data
     else:
-        raise ValueError("Input data is not in the expected tuple format containing an image and metadata.")
+        img = data
+    img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    img = cv2.resize(img, (84, 84), interpolation=cv2.INTER_AREA)
+    return img
 
-    # Check if the input is None
-    if img is None:
-        raise ValueError("The input image is None")
+# def preprocessing(data):
+#     # Turns out img is not the img. Data is a tuple
+#     print(f"\nImg data: {data}\n")
+#     print(f"Img data type: {type(data)}\n")
 
-    # Check if the input is a NumPy array
-    if not isinstance(img, np.ndarray):
-        raise ValueError("The img needs to be a NumPy array.")
+#     if isinstance(data, tuple) and len(data) == 2 and isinstance(data[0], np.ndarray):
+#         img = data[0]  # Extract the image data
+#     else:
+#         raise ValueError("Input data is not in the expected tuple format containing an image and metadata.")
 
-    # Check the shape of the image
-    if img.ndim != 3 or img.shape[2] != 3:
-        raise ValueError("The input image must have three color channels (RGB).")
+#     # Check if the input is None
+#     if img is None:
+#         raise ValueError("The input image is None")
 
-    # Ensure the image data type is uint8
-    if img.dtype != np.uint8:
-        print("Image dtype is not uint8. Converting...")
-        img = img.astype(np.uint8)
+#     # Check if the input is a NumPy array
+#     if not isinstance(img, np.ndarray):
+#         raise ValueError("The img needs to be a NumPy array.")
 
-    try:
-        # Convert the image from RGB to Grayscale
-        img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-        # Resize the image to 84x84
-        img = cv2.resize(img, (84, 84), interpolation=cv2.INTER_AREA)
-        return img
-    except cv2.error as e:
-        print(f"OpenCV error during preprocessing: {e}")
-        raise
-    except Exception as e:
-        print(f"General error during image preprocessing: {e}")
-        raise
+#     # Check the shape of the image
+#     if img.ndim != 3 or img.shape[2] != 3:
+#         raise ValueError("The input image must have three color channels (RGB).")
+
+#     # Ensure the image data type is uint8
+#     if img.dtype != np.uint8:
+#         print("Image dtype is not uint8. Converting...")
+#         img = img.astype(np.uint8)
+
+#     try:
+#         # Convert the image from RGB to Grayscale
+#         img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+#         # Resize the image to 84x84
+#         img = cv2.resize(img, (84, 84), interpolation=cv2.INTER_AREA)
+#         return img
+#     except cv2.error as e:
+#         print(f"OpenCV error during preprocessing: {e}")
+#         raise
+#     except Exception as e:
+#         print(f"General error during image preprocessing: {e}")
+#         raise
 
 def stack_states(stacked_frames, state, is_new_episode):
     frame = preprocessing(state)
