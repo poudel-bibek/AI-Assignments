@@ -3,7 +3,7 @@ import cv2
 import gym
 from copy import deepcopy
 import torch
-from torch._six import inf
+from torch import inf
 import argparse
 
 def mean_of_list(func):
