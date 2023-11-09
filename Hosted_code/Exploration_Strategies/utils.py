@@ -21,12 +21,14 @@ def mean_of_list(func):
 #     return img
 
 def preprocessing(data):
-    # Turns out img is not the img
-    print(f"\nImg data: {data}\n")
-    print(f"Img data type: {type(data)}\n")
-    print(f"Img data shape: {data.shape}\n")
+    # Turns out img is not the img. Data is a tuple
+    #print(f"\nImg data: {data}\n")
+    #print(f"Img data type: {type(data)}\n")
 
-    img, _ = data
+    if isinstance(data, tuple) and len(data) == 2 and isinstance(data[0], np.ndarray):
+        img = data[0]  # Extract the image data
+    else:
+        raise ValueError("Input data is not in the expected tuple format containing an image and metadata.")
 
     # Check if the input is None
     if img is None:
