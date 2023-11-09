@@ -1,10 +1,10 @@
-from Brain.model import PolicyModel, PredictorModel, TargetModel
+from model import PolicyModel, PredictorModel, TargetModel
 import torch
 from torch import from_numpy
 import numpy as np
 from numpy import concatenate  # Make coder faster.
 from torch.optim.adam import Adam
-from Common.utils import mean_of_list, RunningMeanStd, clip_grad_norm_
+from utils import mean_of_list, RunningMeanStd, clip_grad_norm_
 
 torch.backends.cudnn.benchmark = True
 
