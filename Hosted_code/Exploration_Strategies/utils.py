@@ -22,8 +22,8 @@ def mean_of_list(func):
 
 def preprocessing(data):
     # Turns out img is not the img. Data is a tuple
-    #print(f"\nImg data: {data}\n")
-    #print(f"Img data type: {type(data)}\n")
+    print(f"\nImg data: {data}\n")
+    print(f"Img data type: {type(data)}\n")
 
     if isinstance(data, tuple) and len(data) == 2 and isinstance(data[0], np.ndarray):
         img = data[0]  # Extract the image data
