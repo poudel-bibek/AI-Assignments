@@ -21,6 +21,8 @@ def mean_of_list(func):
 #     return img
 
 def preprocessing(img):
+    print(f"\nImg: {img}\n")
+    
     # Check if the input is None
     if img is None:
         raise ValueError("The input image is None")
