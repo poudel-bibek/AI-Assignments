@@ -20,9 +20,12 @@ def mean_of_list(func):
 #     img = cv2.resize(img, (84, 84), interpolation=cv2.INTER_AREA)
 #     return img
 
-def preprocessing(img):
-    print(f"\nImg: {img}\n")
-    
+def preprocessing(data):
+    # Turns out img is not the img
+    #print(f"\nImg data: {data}\n")
+
+    img, _ = data
+
     # Check if the input is None
     if img is None:
         raise ValueError("The input image is None")
