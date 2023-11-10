@@ -137,7 +137,10 @@ class AddRandomStateToInfoEnv(gym.Wrapper):
         self.rng_at_episode_start = deepcopy(self.unwrapped.np_random)
 
     def step(self, action):
-        state, reward, done, info = self.env.step(action)
+        #state, reward, done, info = self.env.step(action)
+        # In gymnasium step has changed to return obs, reward, terminated, truncated, info
+        state, reward, done, _, info = self.env.step(action)
+        
         if done:
             if 'episode' not in info:
                 info['episode'] = {}

@@ -31,7 +31,10 @@ class Play:
             done = False
             while not done:
                 action, *_ = self.agent.get_actions_and_values(stacked_states)
-                s_, r, done, info = self.env.step(action)
+                #s_, r, done, info = self.env.step(action)
+                # In gymnasium step has changed to return obs, reward, terminated, truncated, info
+                s_, r, done, _, info = self.env.step(action)
+
                 episode_reward += r
                 clipped_ep_reward += np.sign(r)
 
