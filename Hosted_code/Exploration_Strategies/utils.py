@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
-import gymnasium as gym
+#import gymnasium as gym
+import gym
 from copy import deepcopy
 import torch
 from torch import inf
@@ -94,10 +95,10 @@ class RepeatActionEnv(gym.Wrapper):
     def step(self, action):
         reward, done = 0, False
         for t in range(4):
-            #state, r, done, info = self.env.step(action)
+            state, r, done, info = self.env.step(action)
             # In gymnasium step has changed to return obs, reward, terminated, truncated, info
-            state, r, terminated, truncated, info = self.env.step(action)
-            done = terminated or truncated
+            #state, r, terminated, truncated, info = self.env.step(action)
+            #done = terminated or truncated
 
             if t == 2:
                 self.successive_frame[0] = state
@@ -119,10 +120,10 @@ class MontezumaVisitedRoomEnv(gym.Wrapper):
 
     def step(self, action):
 
-        #state, reward, done, info = self.env.step(action)
+        state, reward, done, info = self.env.step(action)
         # In gymnasium step has changed to return obs, reward, terminated, truncated, info
-        state, reward, terminated, truncated, info = self.env.step(action)
-        done = terminated or truncated
+        #state, reward, terminated, truncated, info = self.env.step(action)
+        #done = terminated or truncated
 
         ram = self.unwrapped.ale.getRAM()
         assert len(ram) == 128
@@ -145,10 +146,10 @@ class AddRandomStateToInfoEnv(gym.Wrapper):
 
     def step(self, action):
 
-        #state, reward, done, info = self.env.step(action)
+        state, reward, done, info = self.env.step(action)
         # In gymnasium step has changed to return obs, reward, terminated, truncated, info
-        state, reward, terminated, truncated, info = self.env.step(action)
-        done = terminated or truncated
+        #state, reward, terminated, truncated, info = self.env.step(action)
+        #done = terminated or truncated
 
         if done:
             if 'episode' not in info:
