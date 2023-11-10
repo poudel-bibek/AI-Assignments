@@ -19,6 +19,16 @@ class Brain:
         self.current_policy = PolicyModel(self.config["state_shape"], self.config["n_actions"]).to(self.device)
         self.predictor_model = PredictorModel(self.obs_shape).to(self.device)
         self.target_model = TargetModel(self.obs_shape).to(self.device)
+
+        # print total parameters of each
+        params_policy = sum(p.numel() for p in self.current_policy.parameters() if p.requires_grad)
+        params_predictor = sum(p.numel() for p in self.predictor_model.parameters() if p.requires_grad)
+        params_target = sum(p.numel() for p in self.target_model.parameters() if p.requires_grad)
+
+        print("Total parameters of policy model: ", params_policy)
+        print("Total parameters of predictor model: ", params_predictor)
+        print("Total parameters of target model: ", params_target)
+
         for param in self.target_model.parameters():
             param.requires_grad = False
 
