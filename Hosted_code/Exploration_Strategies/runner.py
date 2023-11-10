@@ -29,8 +29,9 @@ class Worker:
             action = conn.recv()
             #next_state, r, d, info = self.env.step(action)
             # In gymnasium step has changed to return obs, reward, terminated, truncated, info
-            next_state, r, d, _, info = self.env.step(action)
-            
+            next_state, r, terminated, truncated, info = self.env.step(action)
+            d = terminated or truncated
+
             t += 1
             if t % self.max_episode_steps == 0:
                 d = True
