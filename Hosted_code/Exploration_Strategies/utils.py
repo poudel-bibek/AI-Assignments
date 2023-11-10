@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-import gym
+import gymnasium as gym
 from copy import deepcopy
 import torch
 from torch import inf
