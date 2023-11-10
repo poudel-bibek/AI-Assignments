@@ -1,4 +1,3 @@
-from model import PolicyModel, PredictorModel, TargetModel
 import torch
 from torch import from_numpy
 import numpy as np
