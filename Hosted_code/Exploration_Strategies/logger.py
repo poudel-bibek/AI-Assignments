@@ -61,6 +61,7 @@ class Logger:
             self.save_params(self.episode, iteration)
 
         with SummaryWriter("Logs/" + self.log_dir) as writer:
+            writer.add_scalar("Running Episode Ext Reward", self.running_ext_reward, self.episode)
             writer.add_scalar("Running Intrinsic Reward", self.running_int_reward, iteration)
             writer.add_scalar("Running PG Loss", self.running_training_logs[0], iteration)
             writer.add_scalar("Running RND Loss", self.running_training_logs[3], iteration)
