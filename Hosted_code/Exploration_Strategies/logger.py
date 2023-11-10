@@ -61,20 +61,10 @@ class Logger:
             self.save_params(self.episode, iteration)
 
         with SummaryWriter("Logs/" + self.log_dir) as writer:
-            writer.add_scalar("Episode Ext Reward", self.episode_ext_reward, self.episode)
-            writer.add_scalar("Running Episode Ext Reward", self.running_ext_reward, self.episode)
-            writer.add_scalar("Visited rooms", len(list(self.visited_rooms)), self.episode)
-            writer.add_scalar("Running last 10 Ext Reward", self.running_last_10_ext_r, self.episode)
-            writer.add_scalar("Max Episode Ext Reward", self.max_episode_reward, self.episode)
-            writer.add_scalar("Running Action Probability", self.running_act_prob, iteration)
             writer.add_scalar("Running Intrinsic Reward", self.running_int_reward, iteration)
             writer.add_scalar("Running PG Loss", self.running_training_logs[0], iteration)
-            writer.add_scalar("Running Ext Value Loss", self.running_training_logs[1], iteration)
-            writer.add_scalar("Running Int Value Loss", self.running_training_logs[2], iteration)
             writer.add_scalar("Running RND Loss", self.running_training_logs[3], iteration)
             writer.add_scalar("Running Entropy", self.running_training_logs[4], iteration)
-            writer.add_scalar("Running Intrinsic Explained variance", self.running_training_logs[5], iteration)
-            writer.add_scalar("Running Extrinsic Explained variance", self.running_training_logs[6], iteration)
 
         self.off()
         if iteration % self.config["interval"] == 0:
@@ -83,15 +73,13 @@ class Logger:
                   "EP_Reward:{}| "
                   "EP_Running_Reward:{:.3f}| "
                   "Visited_rooms:{}| "
-                  "Iter_Duration:{:.3f}| "
-                  "Time:{} "
+                  "Iter_Duration:{:.3f}"
                   .format(iteration,
                           self.episode,
                           self.episode_ext_reward,
                           self.running_ext_reward,
                           self.visited_rooms,
-                          self.duration,
-                          datetime.datetime.now().strftime("%H:%M:%S"),
+                          self.duration
                           ))
         self.on()
 

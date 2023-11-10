@@ -24,9 +24,11 @@ class Brain:
         params_predictor = sum(p.numel() for p in self.predictor_model.parameters() if p.requires_grad)
         params_target = sum(p.numel() for p in self.target_model.parameters() if p.requires_grad)
 
+        print("\n")
         print("Total parameters of policy model: ", params_policy)
         print("Total parameters of predictor model: ", params_predictor)
         print("Total parameters of target model: ", params_target)
+        print("\n")
 
         for param in self.target_model.parameters():
             param.requires_grad = False
