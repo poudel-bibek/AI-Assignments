@@ -118,8 +118,12 @@ class MontezumaVisitedRoomEnv(gym.Wrapper):
         self.visited_rooms = set()  # Only stores unique numbers.
 
     def step(self, action):
+
+        #state, reward, done, info = self.env.step(action)
+        # In gymnasium step has changed to return obs, reward, terminated, truncated, info
         state, reward, terminated, truncated, info = self.env.step(action)
         done = terminated or truncated
+
         ram = self.unwrapped.ale.getRAM()
         assert len(ram) == 128
         self.visited_rooms.add(ram[self.room_address])
@@ -140,10 +144,12 @@ class AddRandomStateToInfoEnv(gym.Wrapper):
         self.rng_at_episode_start = deepcopy(self.unwrapped.np_random)
 
     def step(self, action):
+
         #state, reward, done, info = self.env.step(action)
         # In gymnasium step has changed to return obs, reward, terminated, truncated, info
-        state, reward, done, _, info = self.env.step(action)
-        
+        state, reward, terminated, truncated, info = self.env.step(action)
+        done = terminated or truncated
+
         if done:
             if 'episode' not in info:
                 info['episode'] = {}
