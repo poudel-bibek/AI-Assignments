@@ -1,6 +1,6 @@
 ## Artificial Intelligence Assignments
 
-(Supporting repository: The content is part of two active classes at UTK and is not available)
+(Supporting repository: The content is part of two active classes at UTK and is not publicly available)
 
 ------------------
 Setup:
