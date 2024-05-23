@@ -1,4 +1,7 @@
 ## Artificial Intelligence Assignments
+
+(Supporting repository: The content is part of two active classes at UTK and is not available)
+
 ------------------
 Setup:
 1. Demo Assignment
