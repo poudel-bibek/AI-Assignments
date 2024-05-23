@@ -7,7 +7,7 @@ Instructor: [Weizi Li](https://weizi-li.github.io/), TA: [Bibek Poudel](https://
 
 - [Instructions](instructions.md)
 - [Intro slides](https://nbviewer.org/github/poudel-bibek/AI-Assignments/blob/gh-pages/Slides_1.pdf)
-- [Basics](https://colab.research.google.com/drive/1ukczrXFt05g0v-DnDJMQsNOrhlodEUTf?usp=sharing)
+- [Basics](https://github.com/poudel-bibek/AI-Assignments/blob/gh-pages/moved.md)
 
 
 ---
