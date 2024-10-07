@@ -1,6 +1,6 @@
 ## Artificial Intelligence Assignments (Supporting Repository)
 
-The content is part of two active classes at UTK and is not publicly available.
+The content is part of two active classes at UTK (previously University of Memphis) and is not publicly available.
 
 ------------------
 Setup:
