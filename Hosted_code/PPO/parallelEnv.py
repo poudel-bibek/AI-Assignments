@@ -87,12 +87,13 @@ def worker(remote, parent_remote, env_fn_wrapper):
     while True:
         cmd, data = remote.recv()
         if cmd == 'step':
-            ob, reward, done, truncated, info = env.step(data)
+            ob, reward, terminated, truncated, info = env.step(data)
+            done = terminated or truncated
             if done:
-                ob = env.reset()
+                ob, info = env.reset()  # reset() now returns (obs, info)
             remote.send((ob, reward, done, truncated, info))
         elif cmd == 'reset':
-            ob = env.reset()
+            ob, info = env.reset()  # reset() now returns (obs, info)
             remote.send(ob)
         elif cmd == 'reset_task':
             ob = env.reset_task()
@@ -110,13 +111,14 @@ class parallelEnv(VecEnv):
                  n=4, seed=None,
                  spaces=None):
 
-        # Create gym environments
-        env_fns = [gym.make(env_name) for _ in range(n)]
-
-        # Set seeds for environments, if provided
+        # Create gym environments with seed passed during creation
         if seed is not None:
-            for i, e in enumerate(env_fns):
-                e.seed(i + seed)
+            env_fns = [gym.make(env_name) for i in range(n)]
+            # Store seeds to pass during reset
+            self.seeds = [i + seed for i in range(n)]
+        else:
+            env_fns = [gym.make(env_name) for _ in range(n)]
+            self.seeds = [None] * n
 
         # Initialize multiprocessing components
         self.waiting = False
