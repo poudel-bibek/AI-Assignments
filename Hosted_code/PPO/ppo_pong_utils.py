@@ -60,7 +60,7 @@ def collect_trajectories(envs, policy, tmax=200, nrand=5):
         batch_input = preprocess_batch([fr1, fr2])
 
         # Calculate action probabilities (no gradient needed, move to CPU)
-        probs = policy(batch_input).squeeze().cpu().detach().numpy()
+        probs = policy(batch_input).squeeze(-1).cpu().detach().numpy()
 
         # Determine actions based on probabilities
         action = np.where(np.random.rand(n) < probs, RIGHT, LEFT)
