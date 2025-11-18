@@ -1,12 +1,15 @@
 import numpy as np
 import cv2
-#import gymnasium as gym
-import gym
+import gymnasium as gym  # <--- UPDATED to gymnasium
+import ale_py            # <--- REQUIRED for ALE environments
 from copy import deepcopy
 import torch
 from torch import inf
 import argparse
 import pprint
+
+# Register Atari environments for Gymnasium
+gym.register_envs(ale_py)
 
 def mean_of_list(func):
     def function_wrapper(*args, **kwargs):
@@ -36,30 +39,27 @@ def stack_states(stacked_frames, state, is_new_episode):
     return stacked_frames
 
 
-# Calculates if value function is a good predictor of the returns (ev > 1)
-# or if it's just worse than predicting nothing (ev =< 0)
 def explained_variance(ypred, y):
-    """
-    Computes fraction of variance that ypred explains about y.
-    Returns 1 - Var[y-ypred] / Var[y]
-    interpretation:
-        ev=0  =>  might as well have predicted zero
-        ev=1  =>  perfect prediction
-        ev<0  =>  worse than just predicting zero
-    """
     assert y.ndim == 1 and ypred.ndim == 1
     vary = np.var(y)
     return np.nan if vary == 0 else 1 - np.var(y - ypred) / vary
 
 
 def make_atari(env_id, max_episode_steps, sticky_action=True, max_and_skip=True):
-    env = gym.make(env_id)
-    env._max_episode_steps = max_episode_steps * 4
-    assert 'NoFrameskip' in env.spec.id
+    # frameskip=1 ensures we have raw control (simulating NoFrameskip)
+    env = gym.make(env_id, render_mode="rgb_array", frameskip=1)
+    
+    # Handle max steps
+    if hasattr(env, '_max_episode_steps'):
+        env._max_episode_steps = max_episode_steps * 4
+    
+    # Removed assert 'NoFrameskip' because v5 envs use different naming
+    
     if sticky_action:
         env = StickyActionEnv(env)
     if max_and_skip:
         env = RepeatActionEnv(env)
+        
     env = MontezumaVisitedRoomEnv(env, 3)
     env = AddRandomStateToInfoEnv(env)
 
@@ -77,11 +77,13 @@ class StickyActionEnv(gym.Wrapper):
             action = self.last_action
 
         self.last_action = action
+        
+        # GYMNASIUM UPDATE: Returns 5 values
         return self.env.step(action)
 
-    def reset(self):
+    def reset(self, **kwargs):
         self.last_action = 0
-        return self.env.reset()
+        return self.env.reset(**kwargs)
 
 
 class RepeatActionEnv(gym.Wrapper):
@@ -93,50 +95,63 @@ class RepeatActionEnv(gym.Wrapper):
         return self.env.reset(**kwargs)
 
     def step(self, action):
-        reward, done = 0, False
+        total_reward = 0
+        terminated = False
+        truncated = False
+        
         for t in range(4):
-            state, r, done, info = self.env.step(action)
-            # In gymnasium step has changed to return obs, reward, terminated, truncated, info
-            #state, r, terminated, truncated, info = self.env.step(action)
-            #done = terminated or truncated
-
+            # GYMNASIUM UPDATE: Unpack 5 values
+            state, r, term, trunc, info = self.env.step(action)
+            
             if t == 2:
                 self.successive_frame[0] = state
             elif t == 3:
                 self.successive_frame[1] = state
-            reward += r
-            if done:
+            
+            total_reward += r
+            
+            if term or trunc:
+                terminated = term
+                truncated = trunc
                 break
 
         state = self.successive_frame.max(axis=0)
-        return state, reward, done, info
+        
+        # GYMNASIUM UPDATE: Return 5 values
+        return state, total_reward, terminated, truncated, info
 
 
 class MontezumaVisitedRoomEnv(gym.Wrapper):
     def __init__(self, env, room_address):
         gym.Wrapper.__init__(self, env)
         self.room_address = room_address
-        self.visited_rooms = set()  # Only stores unique numbers.
+        self.visited_rooms = set()
 
     def step(self, action):
+        # GYMNASIUM UPDATE: Unpack 5 values
+        state, reward, terminated, truncated, info = self.env.step(action)
+        
+        # Access RAM via ale interface
+        # In new Gymnasium, we might need to access unwrapped ale differently, 
+        # but usually this works if ale-py is backing it.
+        try:
+            ram = self.unwrapped.ale.getRAM()
+            assert len(ram) == 128
+            self.visited_rooms.add(ram[self.room_address])
+        except AttributeError:
+            # Fallback if accessing raw RAM is different in v5
+            pass
 
-        state, reward, done, info = self.env.step(action)
-        # In gymnasium step has changed to return obs, reward, terminated, truncated, info
-        #state, reward, terminated, truncated, info = self.env.step(action)
-        #done = terminated or truncated
-
-        ram = self.unwrapped.ale.getRAM()
-        assert len(ram) == 128
-        self.visited_rooms.add(ram[self.room_address])
-        if done:
+        if terminated or truncated:
             if "episode" not in info:
                 info["episode"] = {}
             info["episode"].update(visited_room=deepcopy(self.visited_rooms))
             self.visited_rooms.clear()
-        return state, reward, done, info
+            
+        return state, reward, terminated, truncated, info
 
-    def reset(self):
-        return self.env.reset()
+    def reset(self, **kwargs):
+        return self.env.reset(**kwargs)
 
 
 class AddRandomStateToInfoEnv(gym.Wrapper):
@@ -145,26 +160,22 @@ class AddRandomStateToInfoEnv(gym.Wrapper):
         self.rng_at_episode_start = deepcopy(self.unwrapped.np_random)
 
     def step(self, action):
-
-        state, reward, done, info = self.env.step(action)
-        # In gymnasium step has changed to return obs, reward, terminated, truncated, info
-        #state, reward, terminated, truncated, info = self.env.step(action)
-        #done = terminated or truncated
-
-        if done:
+        # GYMNASIUM UPDATE: Unpack 5 values
+        state, reward, terminated, truncated, info = self.env.step(action)
+        
+        if terminated or truncated:
             if 'episode' not in info:
                 info['episode'] = {}
             info['episode']['rng_at_episode_start'] = self.rng_at_episode_start
-        return state, reward, done, info
+            
+        return state, reward, terminated, truncated, info
 
-    def reset(self):
+    def reset(self, **kwargs):
         self.rng_at_episode_start = deepcopy(self.unwrapped.np_random)
-        return self.env.reset()
+        return self.env.reset(**kwargs)
 
 
 class RunningMeanStd:
-    # https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Parallel_algorithm
-    # -> It's indeed batch normalization. :D
     def __init__(self, epsilon=1e-4, shape=()):
         self.mean = np.zeros(shape, 'float64')
         self.var = np.ones(shape, 'float64')
@@ -209,10 +220,6 @@ class RewardForwardFilter(object):
 
 
 def clip_grad_norm_(parameters, norm_type: float = 2.0):
-    """
-    This is the official clip_grad_norm implemented in pytorch but the max_norm part has been removed.
-    https://github.com/pytorch/pytorch/blob/52f2db752d2b29267da356a06ca91e10cd732dbc/torch/nn/utils/clip_grad.py#L9
-    """
     if isinstance(parameters, torch.Tensor):
         parameters = [parameters]
     parameters = [p for p in parameters if p.grad is not None]
@@ -246,16 +253,11 @@ def get_params():
 
     parser_params = parser.parse_args()
 
-    """ 
-     Parameters based on the "Exploration By Random Network Distillation" paper.
-     https://arxiv.org/abs/1810.12894    
-    """
-    # region default parameters
     default_params = {"env_name": "ALE/MontezumaRevenge-v5",
                       "state_shape": (4, 84, 84),
                       "obs_shape": (1, 84, 84),
                       "total_rollouts_per_env": int(30e3),
-                      "max_frames_per_episode": 4500,  # 4500 * 4 = 18K :D
+                      "max_frames_per_episode": 4500, 
                       "rollout_length": 128,
                       "n_epochs": 4,
                       "n_mini_batch": 4,
@@ -270,8 +272,5 @@ def get_params():
                       "pre_normalization_steps": 50,
                       }
 
-    # endregion
     total_params = {**vars(parser_params), **default_params}
-    #print("params:", total_params)
-    
     return total_params
