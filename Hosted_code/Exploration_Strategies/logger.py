@@ -7,7 +7,6 @@ import datetime
 import glob
 from collections import deque
 
-
 class Logger:
     def __init__(self, brain, **config):
         self.config = config
@@ -26,7 +25,7 @@ class Logger:
         self.moving_avg_window = 10
         self.moving_weights = np.repeat(1.0, self.moving_avg_window) / self.moving_avg_window
         self.last_10_ep_rewards = deque(maxlen=10)
-        self.running_last_10_ext_r = 0  # It is not correct but does not matter.
+        self.running_last_10_ext_r = 0
 
         if not self.config["do_test"] and self.config["train_from_scratch"]:
             self.create_wights_folder()
@@ -116,6 +115,7 @@ class Logger:
     def load_weights(self):
         model_dir = glob.glob("Models/*")
         model_dir.sort()
-        checkpoint = torch.load(model_dir[-1] + "/params.pth")
+        # weights_only=False needed for PyTorch 2.6+ compatibility
+        checkpoint = torch.load(model_dir[-1] + "/params.pth", weights_only=False)
         self.log_dir = model_dir[-1].split(os.sep)[-1]
         return checkpoint

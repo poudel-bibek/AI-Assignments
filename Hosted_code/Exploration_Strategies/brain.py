@@ -1,12 +1,10 @@
 import torch
 from torch import from_numpy
 import numpy as np
-from numpy import concatenate  # Make coder faster.
 from torch.optim.adam import Adam
 from utils import mean_of_list, RunningMeanStd, clip_grad_norm_
 
 torch.backends.cudnn.benchmark = True
-
 
 class Brain:
     def __init__(self, current_policy, predictor_model, target_model, **config):
@@ -15,11 +13,11 @@ class Brain:
         self.device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
         self.obs_shape = self.config["obs_shape"]
 
-        self.current_policy = current_policy #PolicyModel(self.config["state_shape"], self.config["n_actions"]).to(self.device)
-        self.predictor_model = predictor_model #PredictorModel(self.obs_shape).to(self.device)
-        self.target_model = target_model #TargetModel(self.obs_shape).to(self.device)
+        self.current_policy = current_policy
+        self.predictor_model = predictor_model
+        self.target_model = target_model
 
-        # print total parameters of each
+        # Print total parameters of each model
         params_policy = sum(p.numel() for p in self.current_policy.parameters() if p.requires_grad)
         params_predictor = sum(p.numel() for p in self.predictor_model.parameters() if p.requires_grad)
         params_target = sum(p.numel() for p in self.target_model.parameters() if p.requires_grad)
@@ -30,6 +28,7 @@ class Brain:
         print("Total parameters of target model: ", params_target)
         print("\n")
 
+        # Target model is fixed
         for param in self.target_model.parameters():
             param.requires_grad = False
 
@@ -77,10 +76,10 @@ class Brain:
         ext_rets = self.get_gae(ext_rewards, ext_values, next_ext_values,
                                 dones, self.config["ext_gamma"])
 
-        ext_values = concatenate(ext_values)
+        ext_values = np.concatenate(ext_values)
         ext_advs = ext_rets - ext_values
 
-        int_values = concatenate(int_values)
+        int_values = np.concatenate(int_values)
         int_advs = int_rets - int_values
 
         advs = ext_advs * self.config["ext_adv_coeff"] + int_advs * self.config["int_adv_coeff"]
@@ -119,7 +118,6 @@ class Brain:
                 int_v_losses.append(int_value_loss.item())
                 rnd_losses.append(rnd_loss.item())
                 entropies.append(entropy.item())
-                # https://github.com/openai/random-network-distillation/blob/f75c0f1efa473d5109d487062fd8ed49ddce6634/ppo_agent.py#L187
 
         return pg_losses, ext_v_losses, int_v_losses, rnd_losses, entropies, int_values, int_rets, ext_values, ext_rets
 
@@ -127,11 +125,10 @@ class Brain:
         self.optimizer.zero_grad()
         loss.backward()
         clip_grad_norm_(self.total_trainable_params)
-        # torch.nn.utils.clip_grad_norm_(self.total_trainable_params, 0.5)
         self.optimizer.step()
 
     def get_gae(self, rewards, values, next_values, dones, gamma):
-        lam = self.config["lambda"]  # Make code faster.
+        lam = self.config["lambda"]
         returns = [[] for _ in range(self.config["n_workers"])]
         extended_values = np.zeros((self.config["n_workers"], self.config["rollout_length"] + 1))
         for worker in range(self.config["n_workers"]):
@@ -143,27 +140,10 @@ class Brain:
                 gae = delta + gamma * lam * (1 - dones[worker][step]) * gae
                 returns[worker].insert(0, gae + extended_values[worker][step])
 
-        return concatenate(returns)
-
-    def calculate_int_rewards(self, next_states, batch=True):
-        if not batch:
-            next_states = np.expand_dims(next_states, 0)
-        next_states = np.clip((next_states - self.state_rms.mean) / (self.state_rms.var ** 0.5), -5, 5,
-                              dtype="float32")  # dtype to avoid '.float()' call for pytorch.
-        next_states = from_numpy(next_states).to(self.device)
-        predictor_encoded_features = self.predictor_model(next_states)
-        target_encoded_features = self.target_model(next_states)
-
-        int_reward = (predictor_encoded_features - target_encoded_features).pow(2).mean(1)
-        if not batch:
-            return int_reward.detach().cpu().numpy()
-        else:
-            return int_reward.detach().cpu().numpy().reshape((self.config["n_workers"], self.config["rollout_length"]))
+        return np.concatenate(returns)
 
     def normalize_int_rewards(self, intrinsic_rewards):
-        # OpenAI's usage of Forward filter is definitely wrong;
-        # Because: https://github.com/openai/random-network-distillation/issues/16#issuecomment-488387659
-        gamma = self.config["int_gamma"]  # Make code faster.
+        gamma = self.config["int_gamma"]
         intrinsic_returns = [[] for _ in range(self.config["n_workers"])]
         for worker in range(self.config["n_workers"]):
             rewems = 0
