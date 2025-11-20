@@ -1,8 +1,11 @@
 import argparse
 from copy import deepcopy
 
-import gym
+import ale_py
+import gymnasium as gym
 import numpy as np
+
+gym.register_envs(ale_py)
 
 class StickyActionEnv(gym.Wrapper):
     def __init__(self, env, p=0.25):
