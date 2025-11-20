@@ -3,9 +3,21 @@ from copy import deepcopy
 
 import ale_py
 import gymnasium as gym
+from gymnasium import error as gym_error
 import numpy as np
 
-gym.register_envs(ale_py)
+_ALE_REGISTERED = False
+
+
+def _ensure_ale_namespace():
+    global _ALE_REGISTERED
+    if _ALE_REGISTERED:
+        return
+    gym.register_envs(ale_py)
+    _ALE_REGISTERED = True
+
+
+_ensure_ale_namespace()
 
 class StickyActionEnv(gym.Wrapper):
     def __init__(self, env, p=0.25):
@@ -88,7 +100,13 @@ class AddRandomStateToInfoEnv(gym.Wrapper):
 
 def make_atari(env_id, max_episode_steps, sticky_action=True, max_and_skip=True):
     """Create and wrap Atari environment"""
-    env = gym.make(env_id, render_mode="rgb_array")
+    _ensure_ale_namespace()
+    try:
+        env = gym.make(env_id, render_mode="rgb_array")
+    except gym_error.NamespaceNotFound:
+        # Retry once after forcing registration
+        _ensure_ale_namespace()
+        env = gym.make(env_id, render_mode="rgb_array")
     env._max_episode_steps = max_episode_steps * 4
     if sticky_action:
         env = StickyActionEnv(env)
@@ -98,15 +116,16 @@ def make_atari(env_id, max_episode_steps, sticky_action=True, max_and_skip=True)
     env = AddRandomStateToInfoEnv(env)
     return env
 
+
 def get_params():
-    """Get configuration parameters"""
+    """Get configuration parameters (CLI-friendly; works in notebooks too)."""
     parser = argparse.ArgumentParser(description="RND Config")
     parser.add_argument("--n_workers", default=2, type=int)
     parser.add_argument("--interval", default=50, type=int)
     parser.add_argument("--do_test", action="store_true")
     parser.add_argument("--render", action="store_true")
     parser.add_argument("--train_from_scratch", action="store_false")
-    parser.add_argument('-f', '--file', help='Dummy argument for Jupyter')
+    parser.add_argument("-f", "--file", help="Dummy argument for Jupyter")
 
     parser_params = parser.parse_args()
 
@@ -130,5 +149,5 @@ def get_params():
         "pre_normalization_steps": 50,
     }
 
-    total_params = {**vars(parser_params), **default_params}
+    total_params = {**default_params, **vars(parser_params)}
     return total_params
